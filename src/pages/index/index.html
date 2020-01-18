@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Webpack</title>
-    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+<meta charset="UTF-8">
+  <title>NewsAnalyzer</title>
+  <link rel="shortcut icon" href="<%=require('../../images/favicon.ico').default%>" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="<%=require('../../images/favicon-32x32.png').default%>">
+<link rel="icon" type="image/png" sizes="96x96" href="<%=require('../../images/favicon-96x96.png').default%>">
+<link rel="icon" type="image/png" sizes="16x16" href="<%=require('../../images/favicon-16x16.png').default%>">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css%>">
 </head>
 <body>
-    <h1>Hello</h1>
-    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+  <div class="page">
+  <section class="root">
+    <header class="header root__section">
+      <p class="header__title">NewsAnalyzer</p>
+      <a class="header__link" href="/index.html">Главная</a>
+      <a class="header__link" href="/about.html">О проекте</a>
+    </header>
+    <div class="search root__section">
+      <h1 class="search__title">Что в мире творится?</h1>
+      <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в носотях за прошедшую неделю.</p>
+      <form name="search" class="search__bar">  
+        <input name="search" type="text" class="search__text" placeholder="Введите тему новости">  
+        <button type="submit" class="button search__button">Искать</button>  
+      </form> 
+    </div>
+  </section>
+  <section class="preloader">
+    <i class="circle-preloader"></i>
+  </section>
+  <section class="not-found">
+    <h3 class="not-found__title">Ничего не найдено</h3>
+    <p class="not-found__message">К сожалению по вашему запросу ничего не найдено.</p>
+  </section>
+  <section class="result">
+    <h2 class="result__title">Результаты поиска</h2>
+    <a class="result__link" href="/analytics.html">Посмотреть аналитику &#62;</a>
+    <div class="result__card">
+      <img class="result__card_photo" src="" alt="">
+      <p class="result__card_date"></p>
+      <h4 class="result__card_title"></h4>
+      <p class="result__card_text"></p>
+      <a class="result__card_source"></a>
+    </div>
+    <button type="submit" class="button result__button">Показать еще</button>
+  </section>
+  <section class="author">
+    <div class="author__pic">
+    </div>
+    <h2 class="author__title">Об авторе</h2>
+    <p class="author__info">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
+    <p class="author__info">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+  </section>
+  <footer class="footer">
+    <p class="footer__copyright">&#169; 2019  Supersite</p>
+    <a class="footer__link" href="/index.html">Главная</a>
+    <a class="footer__link" href="/about.html">О проекте</a>
+    <a class="footer__link" href="https://praktikum.yandex.ru/profile/frontend-developer/">Яндекс.Практикум</a>
+    <a class="footer__social"><img src="<%=require('../../images/git-logo.svg').default%>" alt="git"></a>
+    <a class="footer__social"><img src="<%=require('../../images/facebook.svg').default%>" alt="fb"></a>
+  </footer>
+  </div>
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 </html>

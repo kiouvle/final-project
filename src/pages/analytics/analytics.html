@@ -2,11 +2,29 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Webpack</title>
+    <title>NewsAnalyzer</title>
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
 </head>
 <body>
-    <h1>Hello Anal</h1>
+  <header class="header root__section">
+    <p class="header__title">NewsAnalyzer</p>
+    <a class="header__link" href="/index.html">Главная</a>
+    <a class="header__link" href="/about.html">О проекте</a>
+  </header>
+  <section class="request">
+    <a class="request__to-index">Главная</a><span class="request__this-page"> / Аналитика</span>
+    <h1 class="request__title">Вы спросили: «Путешествия»</h1>
+    <p class="request__count request__count_news">Новостей за неделю:</p><span class="request__number request__number_news">34 324</span>
+    <p class="request__count request__count_titles">Упоминаний в загаловках:</p><span class="request__number request__number_titles">235</span>
+  </section>
+  <footer class="footer">
+    <p class="footer__copyright">&#169; 2019  Supersite</p>
+    <a class="footer__link" href="/index.html">Главная</a>
+    <a class="footer__link" href="/about.html">О проекте</a>
+    <a class="footer__link" href="https://praktikum.yandex.ru/profile/frontend-developer/">Яндекс.Практикум</a>
+    <a class="footer__social"><img src="<%=require('../../images/git-logo.svg').default%>" alt="git"></a>
+    <a class="footer__social"><img src="<%=require('../../images/facebook.svg').default%>" alt="fb"></a>
+  </footer>
     <script src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
 </body>
 </html>

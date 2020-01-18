@@ -2,11 +2,52 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Webpack</title>
+    <title>NewsAnalyzer</title>
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css %>">
 </head>
 <body>
-    <h1>Hello About</h1>
+  <header class="header root__section">
+    <p class="header__title">NewsAnalyzer</p>
+    <a class="header__link" href="/index.html">Главная</a>
+    <a class="header__link" href="/about.html">О проекте</a>
+  </header>
+  <section class="clients">
+    <h2 class="clients__title">Клиентам</h2>
+    <p class="clients__text">Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими технологиями владеет.</p>
+    <p class="clients__text">Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.</p>
+    <p class="clients__text">Карточки с новостями приходят с сервера и обрабатываются асинхронно. То есть сайт продолжает работать, пока от сервера приходит ответ. Это повышает удобство использования сервиса.</p>
+    <p class="clients__text">При создании проекта была использована сборка технологией Webpack. Это современный подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также сайт работает в старых браузерах. Даже если посетители — пользователи старых операционных систем, у них не будет проблем с отображением. А значит, потенциальная аудитория возрастает.</p> 
+    <p class="clients__text">Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к этому студенту.</p>
+  </section>
+  <section class="techs">
+    <h2 class="techs__title">Используемые технологии</h2>
+    <div class="techs__container">
+      <div class="techs__item"><p  class="techs__item_name">HTML</p><img class="techs__item_logo" src="<%=require('../../images/html-logo1.svg').default%>" alt="HTML"></div>
+      <div class="techs__item"><p  class="techs__item_name">CSS</p><img class="techs__item_logo" src="<%=require('../../images/css-logo1.svg').default%>" alt="CSS"></div>
+      <div class="techs__item"><p  class="techs__item_name">Java Script</p><img class="techs__item_logo" src="<%=require('../../images/js-logo.svg').default%>" alt="Java Script"></div>
+      <div class="techs__item"><p  class="techs__item_name">Webpack</p><img class="techs__item_logo" src="<%=require('../../images/wp-logo.svg').default%>" alt="Webpack"></div>
+    </div>
+  </section>
+  <section class="author">
+    <div class="author__pic">
+    </div>
+    <h2 class="author__title">Об авторе</h2>
+    <p class="author__info">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
+    <p class="author__info">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+    <p class="author__info">Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.</p>
+  </section>
+  <section class="commits">
+    <h2 class="commits__title">История коммитов из GitHub</h2>
+    <a class="result__link">Открыть в  Github &#62;</a>
+  </section>
+  <footer class="footer">
+    <p class="footer__copyright">&#169; 2019  Supersite</p>
+    <a class="footer__link" href="/index.html">Главная</a>
+    <a class="footer__link" href="/about.html">О проекте</a>
+    <a class="footer__link" href="https://praktikum.yandex.ru/profile/frontend-developer/">Яндекс.Практикум</a>
+    <a class="footer__social"><img src="<%=require('../../images/git-logo.svg').default%>" alt="git"></a>
+    <a class="footer__social"><img src="<%=require('../../images/facebook.svg').default%>" alt="fb"></a>
+  </footer>
     <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
 </body>
 </html>
