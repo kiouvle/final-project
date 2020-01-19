@@ -1,0 +1,9 @@
+@import url(./__title/search__title.css);
+@import url(./__subtitle/search__subtitle.css);
+@import url(./__bar/search__bar.css);
+@import url(./__text/search__text.css);
+@import url(./__button/search__button.css);
+
+.search {
+  color: white;
+}

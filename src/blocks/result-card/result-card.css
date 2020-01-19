@@ -1,0 +1,13 @@
+@import url(./__date/result-card__date.css);
+@import url(./__photo/result-card__photo.css);
+@import url(./__source/result-card__source.css);
+@import url(./__text/result-card__text.css);
+@import url(./__title/result-card__title.css);
+@import url(./__info/result-card__info.css);
+
+.result-card {
+  width: 100%;
+  max-width: 400px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}

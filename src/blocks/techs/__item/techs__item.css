@@ -1,0 +1,6 @@
+@import url(./_logo/techs__item_logo.css);
+@import url(./_name/techs__item_name.css);
+
+.techs__item {
+  margin: 0 20px 42px 20px;
+}

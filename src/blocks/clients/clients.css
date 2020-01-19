@@ -1,0 +1,6 @@
+@import url(./__title/clients__title.css);
+@import url(./__text/clients__text.css);
+
+.clients {
+ padding: 17px 16px 32px 16px; 
+}

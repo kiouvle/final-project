@@ -1,0 +1,14 @@
+@import url(./_pic/commits__card_pic.css);
+@import url(./_date/commits__card_date.css);
+@import url(./_name/commits__card_name.css);
+@import url(./_mail/commits__card_mail.css);
+@import url(./_description/commits__card_description.css);
+@import url(./_personal/commits__card_personal.css);
+
+.commits__card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 16px;
+  height: 246px;
+  margin-bottom: 48px;
+}
