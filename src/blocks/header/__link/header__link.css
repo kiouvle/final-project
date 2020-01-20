@@ -8,3 +8,14 @@
   margin: 0 0 0 11px;
   text-decoration: none;
 }
+
+.header__link:hover {
+  border-bottom: solid 3px;
+  border-color: inherit;
+  padding-bottom: 16px;
+  color: inherit;
+}
+
+.header__link:active {
+  opacity: 0.6;
+}
