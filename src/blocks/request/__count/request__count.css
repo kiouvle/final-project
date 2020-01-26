@@ -1,0 +1,10 @@
+@import url(./_news/request__count_news.css);
+@import url(./_titles/request__count_titles.css);
+
+.request__count {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}

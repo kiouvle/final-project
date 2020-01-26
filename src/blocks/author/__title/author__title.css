@@ -7,3 +7,11 @@
   padding: 0;
   margin: 24px 0 16px 0;
 }
+
+@media (min-width: 1440px) {
+  .author__title {
+    font-size: 40px;
+    line-height: 46px;
+    margin: 50px 0 24px 0;
+  }
+}

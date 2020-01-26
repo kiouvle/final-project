@@ -6,4 +6,20 @@
 
 .search {
   color: white;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+@media (min-width: 768px) {
+  .search {
+    padding: 40px 21% 48px;;
+  }
+}
+
+@media (min-width: 1440px) {
+  .search {
+    padding: 80px 29%;
+  }
 }

@@ -4,3 +4,10 @@
   max-width: 100%;
   
 }
+
+@media (min-width: 768px) {
+  .result-card__photo {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}

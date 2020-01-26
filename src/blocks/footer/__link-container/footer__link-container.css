@@ -4,3 +4,12 @@
   margin-bottom: 40px;
   padding-top: 10px;
 }
+
+@media (min-width: 768px) {
+  .footer__link-container {
+    flex-direction: row;
+    width: max-content;
+    margin-bottom: 0;
+    
+  }
+}

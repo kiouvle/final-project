@@ -1,0 +1,11 @@
+.result__card-container {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .result__card-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}

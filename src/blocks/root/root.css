@@ -3,3 +3,15 @@
   background-position: center;
   background-size: cover;
 }
+
+@media (min-width: 768px) {
+  .root {
+    background-image: url(../../images/root-bg-m.png);
+  }
+}
+
+@media (min-width: 1440px) {
+  .root {
+    background-image: url(../../images/root-bg-l.png);
+  }
+}

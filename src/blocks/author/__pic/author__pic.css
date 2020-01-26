@@ -4,6 +4,22 @@
   background: url(../../../images/me.jpg);
   border-radius: 1000px;
   background-position: center;
-  background-size: contain;
+  background-size: 100%;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .author__pic {
+    width: 232px;
+    height: 232px;
+    margin: 0 32px 0 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .author__pic {
+    width: 464px;
+    height: 464px;
+    margin: 0 56px 0 0;
+  }
 }

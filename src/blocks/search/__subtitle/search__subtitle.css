@@ -1,7 +1,22 @@
 .search__subtitle {
-  padding: 0 16px 64px 16px;
+  padding-bottom: 64px;
   font-weight: normal;
   font-size: 20px;
   line-height: 26px;
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  .search__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    padding-bottom: 24px;
+    max-width: 545px;
+  }
+}
+
+@media (min-width: 768px) {
+  .search__subtitle {
+    padding-bottom: 64px;
+  }
 }

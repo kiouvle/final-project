@@ -4,3 +4,15 @@
 .clients {
  padding: 17px 16px 32px 16px; 
 }
+
+@media (min-width: 768px) {
+  .clients {
+    padding: 30px 5%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .clients {
+    padding: 80px 7%;
+  }
+}

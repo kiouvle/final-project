@@ -1,8 +1,25 @@
 @import url(./__title/result__title.css);
 @import url(./__link/result__link.css);
 @import url(./__button/result__button.css);
+@import url(./__head/result__head.css);
+@import url(./__card-container/result__card-container.css);
+
 
 .result {
-  padding: 32px 16px 44px 16px;
+  padding: 32px 5% 44px;
   background-color: #E5E5E5;
+}
+
+@media (min-width: 768px) {
+  .result {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 5% 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .result {
+    padding: 80px 7%;
+  }
 }

@@ -5,3 +5,9 @@
   margin: 0 0 5px 0;
   padding: 0;
   }
+
+  @media (min-width: 768px) {
+    .result-card__text{
+      margin-bottom: 12px;
+    }
+  }

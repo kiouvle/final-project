@@ -1,0 +1,6 @@
+@import url(./_this-page/request__list_this-page.css);
+@import url(./_to-index/request__link_to-index.css);
+
+.request__link {
+  display: none;
+}

@@ -1,3 +1,30 @@
-body {
-    color: green;
+@import url(../../blocks/header/header.css);
+@import url(../../vendor/normalize.css);
+@import url(../../blocks/page/page.css);
+@import url(../../blocks/footer/footer.css);
+@import url(../../blocks/request/request.css);
+@import url(../../blocks/chart/chart.css);
+@font-face {
+  src: url('../../fonts/roboto-regular-webfont.woff') format('woff');
+      font-family: 'Roboto';
+      font-weight: normal;
 }
+
+@font-face {
+  src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
+      font-family: 'Roboto Slab';
+      font-weight: normal;
+}
+
+@font-face {
+  src: url('../../fonts/roboto-medium-webfont.woff') format('woff');
+      font-family: 'Roboto';
+      font-weight: 500;
+}
+
+@font-face {
+  src: url('../../fonts/Roboto-Bold.woff') format('woff');
+      font-family: 'Roboto';
+      font-weight: bold;
+}
+

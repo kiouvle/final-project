@@ -1,0 +1,6 @@
+@import url(./__title/chart__title.css);
+
+.chart {
+  background: #F5F6F7;
+  padding: 24px 16px 32px;
+}

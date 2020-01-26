@@ -4,5 +4,21 @@
   font-weight: normal;
   font-size: 30px;
   line-height: 40px;
-  margin: 0 0 16px 0;
+  margin: 0 5% 16px 5%;
+  max-width: 330px;
+}
+
+@media (min-width: 768px) {
+  .commits__title {
+    margin: 0 0 32px 5%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .commits__title {
+   max-width: max-content;
+   margin: 0 0 64px 7%;
+   font-size: 40px;
+    line-height: 46px;
+  }
 }

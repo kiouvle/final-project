@@ -3,8 +3,8 @@
   box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
   color: white;
   border-radius: 100px;
-  padding: 16px;
-  min-width: 288px;
+  padding: 15px;
+  width: 100%;
   border-style: none;
   cursor: pointer;
   font-weight: 500;
@@ -18,4 +18,18 @@
 
 .search__button:active {
   background: #2A65CC;
+}
+
+@media (min-width: 768px) {
+  .search__button {
+    width: 160px;
+    position: absolute;
+    right: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .search__button {
+    width: 168px;
+  }
 }

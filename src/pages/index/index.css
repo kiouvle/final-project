@@ -9,9 +9,7 @@
 @import url(../../blocks/not-found/not-found.css);
 @import url(../../blocks/author/author.css);
 @import url(../../blocks/footer/footer.css);
-@import url();
-@import url();
-@import url();
+
 
 @font-face {
   src: url('../../fonts/roboto-regular-webfont.woff') format('woff');
@@ -27,8 +25,14 @@
 
 @font-face {
   src: url('../../fonts/roboto-medium-webfont.woff') format('woff');
-      font-family: 'Roboto Medium';
-      font-weight: normal;
+      font-family: 'Roboto';
+      font-weight: 500;
+}
+
+@font-face {
+  src: url('../../fonts/Roboto-Bold.woff') format('woff');
+      font-family: 'Roboto';
+      font-weight: bold;
 }
 
 @font-face {

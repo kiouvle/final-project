@@ -1,30 +1,57 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <title>NewsAnalyzer</title>
-    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewsAnalyzer</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
+  <link rel="shortcut icon" href="<%=require('../../images/favicon.ico').default%>" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="<%=require('../../images/favicon-32x32.png').default%>">
+  <link rel="icon" type="image/png" sizes="96x96" href="<%=require('../../images/favicon-96x96.png').default%>">
+  <link rel="icon" type="image/png" sizes="16x16" href="<%=require('../../images/favicon-16x16.png').default%>">
 </head>
+
 <body>
-  <header class="header root__section">
-    <p class="header__title">NewsAnalyzer</p>
-    <a class="header__link" href="/index.html">Главная</a>
-    <a class="header__link" href="/about.html">О проекте</a>
-  </header>
-  <section class="request">
-    <a class="request__to-index">Главная</a><span class="request__this-page"> / Аналитика</span>
-    <h1 class="request__title">Вы спросили: «Путешествия»</h1>
-    <p class="request__count request__count_news">Новостей за неделю:</p><span class="request__number request__number_news">34 324</span>
-    <p class="request__count request__count_titles">Упоминаний в загаловках:</p><span class="request__number request__number_titles">235</span>
-  </section>
-  <footer class="footer">
-    <p class="footer__copyright">&#169; 2019  Supersite</p>
-    <a class="footer__link" href="/index.html">Главная</a>
-    <a class="footer__link" href="/about.html">О проекте</a>
-    <a class="footer__link" href="https://praktikum.yandex.ru/profile/frontend-developer/">Яндекс.Практикум</a>
-    <a class="footer__social"><img src="<%=require('../../images/git-logo.svg').default%>" alt="git"></a>
-    <a class="footer__social"><img src="<%=require('../../images/facebook.svg').default%>" alt="fb"></a>
-  </footer>
-    <script src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
+  <div class="page">
+    <header class="header header_theme_dark">
+      <p class="header__title">NewsAnalyzer</p>
+      <div class="header__link-container">
+        <a class="header__link header__link_inactive" href="/index.html">Главная</a>
+        <a class="header__link header__link_inactive" href="/about.html">О проекте</a>
+      </div>
+    </header>
+    <section class="request">
+      <div class="request__link"><a class="request__link_to-index">Главная</a><span>/</span><a
+          class="request__link_this-page">Аналитика</a></div>
+      <h1 class="request__title">Вы спросили: «Путешествия»</h1>
+      <p class="request__count request__count_news">Новостей за неделю:&ensp;</p><span
+        class="request__number request__number_news">34 324</span>
+      <p class="request__count request__count_titles">Упоминаний в загаловках:&ensp;</p><span
+        class="request__number request__number_titles">235</span>
+    </section>
+    <section class="chart">
+      <h2 class="chart__title">Аналитика по дням</h2>
+      <canvas id="myChart" width="400" height="400"></canvas>
+    </section>
+    <!--TODO make a flippin graph duh-->
+    <footer class="footer">
+      <div class="footer__link-container">
+        <a class="footer__link" href="/index.html">Главная</a>
+        <a class="footer__link" href="/about.html">О проекте</a>
+        <a class="footer__link" href="https://praktikum.yandex.ru/profile/frontend-developer/"
+          target="_blank">Яндекс.Практикум</a>
+      </div>
+      <div class="footer__social-container">
+        <a class="footer__social" href="https://github.com/kiouvle" target="_blank"><img
+            src="<%=require('../../images/git-logo.svg').default%>" alt="git"></a>
+        <a class="footer__social" href="https://www.facebook.com/kiouvle?ref=bookmarks" target="_blank"><img
+            src="<%=require('../../images/facebook.svg').default%>" alt="fb"></a>
+      </div>
+      <p class="footer__copyright">&#169; 2019 Supersite</p>
+    </footer>
+  </div>
+  <script src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
 </body>
+
 </html>

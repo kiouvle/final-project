@@ -7,3 +7,10 @@
   margin: 16px 0 10px 0;
   padding: 0;
 }
+
+@media (min-width: 768px) {
+  .result-card__title {
+    margin: 12px 0 10px 0;
+
+  }
+}

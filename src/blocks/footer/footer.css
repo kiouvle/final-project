@@ -5,9 +5,29 @@
 @import url(./__social/footer__social.css);
 
 .footer {
-  padding: 0 16px 22px 16px;
+  padding: 0 5% 22px;
   display: flex;
   position: relative;
   justify-content: space-between;
-  height: 100%;
+  
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding-left: 204px;
+    padding-right: 5.5%;
+  }
+}
+
+@media (min-width: 1024px){
+  .footer {
+    padding-left: 349px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    padding-left: 549px;
+    padding-right: 7%px;
+  }
 }

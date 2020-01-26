@@ -1,7 +1,23 @@
 @import url(./__info/author__info.css);
 @import url(./__pic/author__pic.css);
 @import url(./__title/author__title.css);
+@import url(./__text/author__text.css);
 
 .author {
-  padding: 32px 16px;
+  padding: 32px 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .author {
+    padding: 40px 5% 48px;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1440px) {
+  .author {
+    padding: 80px 7%;
+  }
 }
