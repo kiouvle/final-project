@@ -2,5 +2,18 @@
 
 .chart {
   background: #F5F6F7;
-  padding: 24px 16px 32px;
+  padding: 24px 5% 32px;
 }
+
+@media (min-width: 768px) {
+ .chart {
+   padding: 40px 5%;
+ }
+}
+
+
+@media (min-width: 1440px) {
+  .chart {
+    padding: 80px 7%;
+  }
+ }

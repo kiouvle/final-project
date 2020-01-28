@@ -22,17 +22,22 @@
       </div>
     </header>
     <section class="request">
-      <div class="request__link"><a class="request__link_to-index">Главная</a><span>/</span><a
-          class="request__link_this-page">Аналитика</a></div>
+      <div class="request__link"><a class="request__link_to-index" href="/index.html">Главная</a><span> /</span>
+        <a class="request__link_this-page" href="/analytics.html">Аналитика</a>
+      </div>
       <h1 class="request__title">Вы спросили: «Путешествия»</h1>
-      <p class="request__count request__count_news">Новостей за неделю:&ensp;</p><span
-        class="request__number request__number_news">34 324</span>
-      <p class="request__count request__count_titles">Упоминаний в загаловках:&ensp;</p><span
-        class="request__number request__number_titles">235</span>
+      <div class="request__count">
+      <p class="request__count_news">Новостей за неделю:&ensp;</p><p
+        class="request__number request__number_news">34 324</p>
+      </div>
+      <div class="request__count">
+      <p class="request__count_titles">Упоминаний в загаловках:&ensp;</p><p
+        class="request__number request__number_titles">235</p>
+      </div>
     </section>
     <section class="chart">
       <h2 class="chart__title">Аналитика по дням</h2>
-      <canvas id="myChart" width="400" height="400"></canvas>
+   
     </section>
     <!--TODO make a flippin graph duh-->
     <footer class="footer">

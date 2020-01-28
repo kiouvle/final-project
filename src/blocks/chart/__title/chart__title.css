@@ -7,3 +7,10 @@
   margin: 0;
   padding: 0;
 }
+
+@media (min-width: 768px) {
+  .chart__title {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}

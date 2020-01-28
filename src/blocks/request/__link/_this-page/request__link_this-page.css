@@ -1,0 +1,12 @@
+.request__link_this-page {
+  text-decoration: none;
+  color: #B6BCBF;
+}
+
+.request__link_this-page:hover {
+  opacity: 0.7;
+}
+
+.request__link_this-page:active {
+  opacity: 0.5;
+}

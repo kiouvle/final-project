@@ -1,0 +1,13 @@
+.request__link_to-index {
+  color: #1A1B22;
+  text-decoration: none;
+
+}
+
+.request__link_to-index:hover {
+  opacity: 0.7;
+}
+
+.request__link_to-index:active {
+  opacity: 0.5;
+}

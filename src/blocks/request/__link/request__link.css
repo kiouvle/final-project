@@ -1,6 +1,23 @@
-@import url(./_this-page/request__list_this-page.css);
+@import url(./_this-page/request__link_this-page.css);
 @import url(./_to-index/request__link_to-index.css);
 
 .request__link {
   display: none;
+  font-size: 18px;
+  line-height: 24px;
+  color: #B6BCBF;
+}
+
+@media (min-width: 768px) {
+  .request__link {
+    display: block;
+    margin-bottom: 64px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .request__link {
+    display: block;
+    margin-bottom: 80px;
+  }
 }
