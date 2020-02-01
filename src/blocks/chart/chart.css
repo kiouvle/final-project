@@ -1,4 +1,8 @@
 @import url(./__title/chart__title.css);
+@import url(./__head/chart__head.css);
+@import url(./__numbers/chart__numbers.css);
+@import url(./__line/chart__line.css);
+@import url(./__content/chart__content.css);
 
 .chart {
   background: #F5F6F7;

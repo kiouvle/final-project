@@ -1,0 +1,20 @@
+@import url(./_day/chart__line_day.css);
+@import url(./_news-count/chart__line_news-count.css);
+
+.chart__line {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .chart__line{
+
+  }
+}
+
+@media (min-width: 1440px) {
+  .chart__line {
+    
+  }
+  
+}

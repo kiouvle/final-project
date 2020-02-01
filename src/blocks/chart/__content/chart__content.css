@@ -1,0 +1,9 @@
+.chart__content {
+  margin-top: 8px;
+}
+
+@media (min-width: 768px) {
+  .chart__content {
+    margin-top: 16px;
+  }
+}

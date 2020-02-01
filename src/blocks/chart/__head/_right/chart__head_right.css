@@ -1,0 +1,12 @@
+.chart__head_right {
+position: relative;
+flex: auto;
+}
+
+
+
+@media (min-width: 1440px) {
+  .chart__head_right {
+
+  }
+}

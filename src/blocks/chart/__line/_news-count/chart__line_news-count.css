@@ -1,0 +1,27 @@
+@import url(./_num/chart__line_news-count_num.css);
+
+.chart__line_news-count {
+  letter-spacing: 0.4px;
+  font-size: 12px;
+  line-height: 16px;
+  color: white;
+  background: #2F71E5;
+  height: 24px;
+  display: flex;
+  align-items: center;  
+  font-weight: bold;
+  padding-left: 6px;
+}
+
+@media (min-width: 768px) {
+  .chart__line_news-count {
+
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .chart__line_news-count {
+
+  }
+}
