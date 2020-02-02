@@ -3,3 +3,9 @@
   line-height: 22px;
   margin: 0 0 16px 0;
 }
+
+@media (min-width: 1440px) {
+  .commits-card__mail {
+    margin-bottom: 22px;
+  }
+}

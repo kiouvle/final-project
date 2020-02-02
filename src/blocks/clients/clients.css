@@ -7,12 +7,12 @@
 
 @media (min-width: 768px) {
   .clients {
-    padding: 30px 5%;
+    padding: 33px 5% 56px;
   }
 }
 
 @media (min-width: 1440px) {
   .clients {
-    padding: 80px 7%;
+    padding: 80px 7% 96px;
   }
 }

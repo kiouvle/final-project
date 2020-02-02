@@ -3,3 +3,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+@media (min-width: 1440px) {
+  .techs__container {
+    padding-top: 14px;
+    padding-left: 20px;
+  }
+}

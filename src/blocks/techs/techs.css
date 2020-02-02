@@ -9,13 +9,13 @@
 
 @media (min-width: 768px) {
   .techs {
-    padding: 40px 5% 50px;
+    padding: 40px 5% 43px;
   }
 }
 
 @media (min-width: 1440px) {
   .techs {
-    padding: 80px 7% 97px;
+    padding: 80px 7% 87px;
     display: flex;
   }
 }

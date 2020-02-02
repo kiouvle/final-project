@@ -1,0 +1,22 @@
+.swiper__button_prev {
+  display: none;
+}
+
+@media  (min-width: 1440px){
+.swiper__button_prev{
+  display: flex;
+  background: #1A1B22;
+  box-shadow: 0px 3px 10px rgba(14, 26, 57, 0.2);
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  margin-top: -50px;
+  left: 24px;
+}
+}
+
+.swiper__button_prev:after {
+  content: "prev";
+  font-size: 13px;
+  color: white;
+}

@@ -1,6 +1,4 @@
-@import url(./_about/author__info_about.css);
-
-.author__info {
+.author__info_about {
   font-size: 18px;
   line-height: 24px;
   padding: 0;
@@ -8,8 +6,7 @@
 }
 
 @media (min-width: 1440px) {
-  .author__info {
-    margin-bottom: 23px;
+  .author__info_about {
     width: 84%;
   }
 }

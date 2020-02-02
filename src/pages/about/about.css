@@ -9,7 +9,7 @@
 @import url(../../blocks/swiper/swiper.css);
 @import url(../../blocks/commits-card/commits-card.css);
 @import url(../../blocks/swiper-slide/swiper-slide.css);
-@import url(../../blocks/swiper-pagination/swiper-pagination.css);
+
 
 @font-face {
   src: url('../../fonts/roboto-regular-webfont.woff') format('woff');

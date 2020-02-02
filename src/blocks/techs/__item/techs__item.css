@@ -2,17 +2,19 @@
 @import url(./_name/techs__item_name.css);
 
 .techs__item {
-  margin: 0 20px 42px 20px;
+  margin: 0 20px 33px 20px;
 }
 
 @media (min-width: 768px) {
   .techs__item {
     margin-bottom: 0;
+    
   }
 }
 
 @media (min-width: 1440px) {
   .techs__item {
     margin-right: 70px;
+    margin-right: 50px;
   }
 }

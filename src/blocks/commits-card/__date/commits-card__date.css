@@ -4,3 +4,9 @@
   color: #B6BCBF;
   margin: 0 0 11px 0;
 }
+
+@media (min-width: 768px) {
+  .commits-card__date {
+    margin-bottom: 19px;
+  }
+}

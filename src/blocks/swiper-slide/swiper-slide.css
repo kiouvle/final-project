@@ -18,3 +18,10 @@
     height: 242px;
   }
 }
+
+@media (min-width: 1440px) {
+  .swiper-slide {
+    max-width: 400px;
+    height: 288px;
+  }
+}

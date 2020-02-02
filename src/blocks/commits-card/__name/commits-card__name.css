@@ -7,3 +7,11 @@
   line-height: 30px;
   
 }
+
+@media (min-width: 1440px) {
+  .commits-card__name {
+    font-size: 26px;
+    line-height: 30px;
+    padding-top: 4px;
+  }
+}

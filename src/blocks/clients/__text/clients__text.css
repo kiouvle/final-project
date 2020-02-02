@@ -5,6 +5,10 @@
   margin: 0 0  24px 0;
 }
 
+.clients__text:last-child {
+  margin-bottom: 0;
+}
+
 @media (min-width: 1440px) {
   .clients__text {
     max-width: 815px;

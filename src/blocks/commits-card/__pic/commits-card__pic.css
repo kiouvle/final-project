@@ -4,3 +4,11 @@
   border-radius: 1000px;
   margin-right: 12px;
 }
+
+@media (min-width: 1440px)  {
+  .commits-card__pic {
+    width: 64px;
+    height: 64px;
+    margin-right: 16px;
+  }
+}

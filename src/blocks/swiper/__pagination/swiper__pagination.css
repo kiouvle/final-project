@@ -1,0 +1,28 @@
+/*так как надо переопределить более специфичный класс из библиотеки*/
+.swiper__container .swiper__pagination {
+  align-self: center;
+  position: absolute;
+  width: max-content;
+  bottom:-3px;
+  left: 42%;
+  z-index: 1;
+}
+
+.swiper__pagination .swiper-pagination-bullet {
+  background: #1A1B22;
+}
+
+@media (min-width: 768px) {
+  .swiper__container .swiper__pagination {
+    bottom: 2px;
+    left: 47%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .swiper__container .swiper__pagination {
+    bottom: 0;
+    left: 49.5%;
+
+  }
+}

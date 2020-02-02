@@ -12,12 +12,12 @@
 
 @media (min-width: 768px) {
   .commits {
-    padding: 40px 0 40px;
+    padding: 40px 0 33px;
   }
 }
 
 @media (min-width: 1440px) {
   .commits {
-    padding: 72px 0 80px;
+    padding: 74px 0 80px;
   }
 }
