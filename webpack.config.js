@@ -10,7 +10,7 @@ module.exports = {
   entry: { main: './src/pages/index/index.js', about: './src/pages/about/about.js', analytics: './src/pages/analytics/analytics.js'   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js'
+    filename: '[name].[chunkhash].js',
   },
   // указали путь к файлу, в квадратных скобках куда вставлять сгенерированный хеш
   module: {
