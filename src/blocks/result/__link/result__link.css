@@ -6,11 +6,18 @@
   text-decoration: none;
   color: #1A1B22;
   display: block;
+  margin-left: -4px;
+
+}
+
+.result__link::after {
+  content: url("../../../images/arrow.svg");
 }
 
 @media (min-width: 768px) {
   .result__link {
     width: max-content;
     padding-bottom: 32px;
+    margin: 0 7px 0 0;
   }
 }

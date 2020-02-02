@@ -11,6 +11,8 @@
   background: #FFFFFF;
   border-radius: 8px;
   margin-bottom: 8px;
+  min-height: 446px;
+  position: relative;
 }
 
 @media (min-width: 768px) {
@@ -18,11 +20,13 @@
     width: 32.5%;
     margin-bottom: 0;
     border-radius: 20px;
+    min-height: 420px;
   }
 }
 
 @media (min-width: 1440px) {
   .result-card {
     max-width: 400px;
+    height: 576px;
   }
 }

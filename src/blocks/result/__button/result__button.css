@@ -23,7 +23,7 @@
 @media (min-width: 768px) {
   .result__button {
     margin-top: 32px;
-    width: 31%;
+    width: 240px;
     align-self: center;
   }
 }

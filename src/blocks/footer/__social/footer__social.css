@@ -9,3 +9,9 @@
 .footer__social:active {
   opacity: 0.2;
 }
+
+@media (min-width: 768px) {
+  .footer__social {
+    margin-left: 24px;
+  }
+}

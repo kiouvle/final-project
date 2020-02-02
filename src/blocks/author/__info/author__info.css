@@ -5,8 +5,9 @@
   margin: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   .author__info {
-    margin-bottom: 24px;
+    margin-bottom: 23px;
+    width: 84%;
   }
 }

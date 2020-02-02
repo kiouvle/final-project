@@ -1,3 +1,9 @@
 .result-card__info {
-  padding: 15px 16px 20px 16px;
+  padding: 11px 16px 20px 16px;
+}
+
+@media (min-width: 1440px) {
+  .result-card__info {
+    padding: 20px 24px 24px;
+  }
 }

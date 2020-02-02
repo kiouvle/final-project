@@ -4,7 +4,7 @@
   color: #B6BCBF;
   position: absolute;
   left: 5%;
-  bottom: 0;
+  bottom: -3px;
 }
 
 @media (min-width: 768px) {
@@ -12,3 +12,10 @@
   bottom: 18px;
  }
 }
+
+@media (min-width: 1440px) {
+  .footer__copyright {
+   left:7%;
+    bottom: 14px;
+  }
+ }

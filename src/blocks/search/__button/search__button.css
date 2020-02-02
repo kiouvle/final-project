@@ -3,7 +3,7 @@
   box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
   color: white;
   border-radius: 100px;
-  padding: 15px;
+  padding: 16px;
   width: 100%;
   border-style: none;
   cursor: pointer;
@@ -32,5 +32,6 @@
 @media (min-width: 1440px) {
   .search__button {
     width: 168px;
+    padding: 21px 0;
   }
 }

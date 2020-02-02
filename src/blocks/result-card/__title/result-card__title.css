@@ -11,6 +11,14 @@
 @media (min-width: 768px) {
   .result-card__title {
     margin: 12px 0 10px 0;
+    line-height: 24px;
+  }
+}
 
+@media (min-width: 1440px) {
+  .result-card__title {
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 16px;
   }
 }

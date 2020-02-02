@@ -9,4 +9,15 @@
   color: #B6BCBF;
   margin: 0;
   padding: 0;
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+
+}
+
+@media (min-width: 1440px) {
+  .result-card__source {
+    left: 24px;
+    bottom: 24px;
+  }
 }

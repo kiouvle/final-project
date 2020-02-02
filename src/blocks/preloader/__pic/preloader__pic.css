@@ -17,3 +17,10 @@
 	}
 
 }
+
+@media (min-width:768px){
+  .preloader__pic{
+    width: 72px;
+    height: 72px;
+  }
+}
