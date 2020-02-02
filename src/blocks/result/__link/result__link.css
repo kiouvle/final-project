@@ -7,7 +7,14 @@
   color: #1A1B22;
   display: block;
   margin-left: -4px;
+}
 
+.result__link:hover {
+  opacity: 0.8;
+}
+
+.result__link:active {
+  opacity: 0.6;
 }
 
 .result__link::after {

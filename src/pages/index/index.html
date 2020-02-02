@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NewsAnalyzer</title>
+  <meta name="description" content="News Analytics Website">
+  <meta name="author" content="Jenya Maltseva">
   <link rel="shortcut icon" href="<%=require('../../images/favicon.ico').default%>" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="32x32" href="<%=require('../../images/favicon-32x32.png').default%>">
   <link rel="icon" type="image/png" sizes="96x96" href="<%=require('../../images/favicon-96x96.png').default%>">
@@ -29,7 +31,7 @@
         <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
           прошедшую неделю.</p>
         <form name="search" class="search__bar">
-          <input name="search" type="text" class="search__text" placeholder="Введите тему новости">
+          <input name="search" type="text" class="search__text" placeholder="Введите тему новости" required>
           <button type="submit" class="button search__button">Искать</button>
         </form>
       </div>
@@ -37,7 +39,7 @@
     <section class="preloader">
       <!--preloader from praktikum-->
       <i class="preloader__pic"></i>
-      <p class="preloader__message">Идет поиск новостей...</p>
+      <h4 class="preloader__message">Идет поиск новостей...</h4>
     </section>
     <section class="not-found">
       <img class="not-found__pic" src="<%=require('../../images/not-found_v1.svg').default%>" alt="not-found">
@@ -46,51 +48,54 @@
     </section>
     <section class="result">
       <div class="result__head">
-      <h2 class="result__title">Результаты поиска</h2>
-      <a class="result__link" href="/analytics.html">Посмотреть аналитику&nbsp;</a>
-    </div>
-    <div class="result__card-container">
-      <div class="result-card">
-        <img class="result-card__photo" src="<%=require('../../images/image_08.png').default%>" alt="news-pic"><div class="result-card__info">
-          <p class="result-card__date">2 августа, 2019</p>
-          <h4 class="result-card__title">Национальное достояние – парки</h4>
-          <p class="result-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-            складыв...</p>
-          <a class="result-card__source">Лента.ру</a>
+        <h2 class="result__title">Результаты поиска</h2>
+        <a class="result__link" href="/analytics.html">Посмотреть аналитику&nbsp;</a>
+      </div>
+      <div class="result__card-container">
+        <div class="result-card">
+          <img class="result-card__photo" src="<%=require('../../images/image_08.png').default%>" alt="news-pic">
+          <div class="result-card__info">
+            <p class="result-card__date">2 августа, 2019</p>
+            <h4 class="result-card__title">Национальное достояние – парки</h4>
+            <p class="result-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+              складыв...</p>
+            <a class="result-card__source">Лента.ру</a>
+          </div>
+        </div>
+        <div class="result-card">
+          <img class="result-card__photo" src="<%=require('../../images/image_08.png').default%>" alt="news-pic">
+          <div class="result-card__info">
+            <p class="result-card__date">2 августа, 2019</p>
+            <h4 class="result-card__title">Национальное достояние – парки</h4>
+            <p class="result-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+              складыв...</p>
+            <a class="result-card__source">Лента.ру</a>
+          </div>
+        </div>
+        <div class="result-card">
+          <img class="result-card__photo" src="<%=require('../../images/image_08.png').default%>" alt="news-pic">
+          <div class="result-card__info">
+            <p class="result-card__date">2 августа, 2019</p>
+            <h4 class="result-card__title">Национальное достояние – парки</h4>
+            <p class="result-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+              складыв...</p>
+            <a class="result-card__source">Лента.ру</a>
+          </div>
         </div>
       </div>
-      <div class="result-card">
-        <img class="result-card__photo" src="<%=require('../../images/image_08.png').default%>" alt="news-pic">
-        <div class="result-card__info">
-          <p class="result-card__date">2 августа, 2019</p>
-          <h4 class="result-card__title">Национальное достояние – парки</h4>
-          <p class="result-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-            складыв...</p>
-          <a class="result-card__source">Лента.ру</a>
-        </div>
-      </div>
-      <div class="result-card">
-        <img class="result-card__photo" src="<%=require('../../images/image_08.png').default%>" alt="news-pic">
-        <div class="result-card__info">
-          <p class="result-card__date">2 августа, 2019</p>
-          <h4 class="result-card__title">Национальное достояние – парки</h4>
-          <p class="result-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-            складыв...</p>
-          <a class="result-card__source">Лента.ру</a>
-        </div>
-      </div>
-    </div>
       <button type="submit" class="button result__button">Показать еще</button>
     </section>
     <section class="author">
       <div class="author__pic"></div>
       <div class="author__text">
-      <h2 class="author__title">Об авторе</h2>
-      <p class="author__info">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
-      <!--TODO change this shite later-->
-      <p class="author__info">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.
-        Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.</p>
-    </div>
+        <h2 class="author__title">Об авторе</h2>
+        <p class="author__info">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы
+          занимаетесь, какими технологиями разработки владеете.</p>
+        <!--TODO change this shite later-->
+        <p class="author__info">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем
+          можете помочь потенциальным заказчикам.
+          Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.</p>
+      </div>
     </section>
     <footer class="footer">
       <div class="footer__link-container">

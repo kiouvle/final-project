@@ -1,4 +1,4 @@
-/*так как надо переопределить более специфичный класс из библиотеки*/
+/*to change the specific class from the library*/
 .swiper__container .swiper__pagination {
   align-self: center;
   position: absolute;
@@ -8,6 +8,7 @@
   z-index: 1;
 }
 
+/*pagination dots*/
 .swiper__pagination .swiper-pagination-bullet {
   background: #1A1B22;
 }

@@ -11,10 +11,12 @@
   align-items: center;  
   font-weight: bold;
   padding-left: 6px;
+  margin-bottom: 6px;
 }
 
 @media (min-width: 768px) {
   .chart__line_news-count {
+    margin-bottom: 3px;
 
   }
 

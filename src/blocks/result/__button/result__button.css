@@ -10,10 +10,11 @@
   font-size: 18px;
   line-height: 24px;
   margin-top: 5px;
+  outline: none;
 }
 
 .result__button:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .result__button:active {

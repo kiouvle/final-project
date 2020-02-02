@@ -18,6 +18,7 @@
 
 .search__button:active {
   background: #2A65CC;
+  outline: none;
 }
 
 @media (min-width: 768px) {
