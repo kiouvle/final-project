@@ -10,7 +10,7 @@ module.exports = {
   entry: { main: './src/pages/index/index.js', about: './src/pages/about/about.js', analytics: './src/pages/analytics/analytics.js'   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js',
+    filename: './scripts/[name].[chunkhash].js',
   },
   // указали путь к файлу, в квадратных скобках куда вставлять сгенерированный хеш
   module: {
@@ -24,7 +24,10 @@ module.exports = {
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=./vendor/[name].[ext]'
+        loader: 'file-loader?name=./fonts/[name].[ext]',
+        options: {
+          publicPath: '../'
+        }
       },
       {
         test: /\.(png|jpg|gif|ico|svg)$/,
@@ -39,7 +42,7 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+          (isDev ? 'style-loader' : {loader: MiniCssExtractPlugin.loader, options: {publicPath: '../'}}),
           'css-loader',
           'postcss-loader'
         ]
@@ -48,7 +51,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css'
+      filename: './styles/style.[contenthash].css'
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
