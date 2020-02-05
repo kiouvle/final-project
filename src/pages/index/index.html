@@ -22,8 +22,10 @@
         <!--changes color of the header-->
         <span class="header__title">NewsAnalyzer</span>
         <ul class="header__link-container link-list">
-          <li class="link-list__item header__link-item header__link-item_active"><a class="header__link" href="index.html">Главная</a></li>
-          <li class="link-list__item header__link-item header__link-item_inactive"><a class="header__link" href="about.html">О проекте</a></li>
+          <li class="link-list__item header__link-item header__link-item_active"><a class="header__link"
+              href="index.html">Главная</a></li>
+          <li class="link-list__item header__link-item header__link-item_inactive"><a class="header__link"
+              href="about.html">О проекте</a></li>
         </ul>
       </header>
       <div class="search">
@@ -86,7 +88,10 @@
       <button type="submit" class="button result__button">Показать еще</button>
     </section>
     <section class="author">
-      <div class="author__pic"></div>
+      <picture>
+        <source media="(max-width: 768px)" srcset="<%=require('../../images/me.jpg').default%>">
+        <img class="author__pic" src="<%=require('../../images/me@2x.jpg').default%>" alt="me">
+      </picture>
       <div class="author__text">
         <h2 class="author__title">Об авторе</h2>
         <p class="author__info">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы
