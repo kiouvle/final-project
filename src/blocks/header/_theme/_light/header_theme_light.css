@@ -2,3 +2,7 @@
   color: white;
   box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);  
 }
+
+.header.header_theme_light .header__link-item_active {
+  border-color: #FFFFFF;
+}

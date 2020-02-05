@@ -1,0 +1,22 @@
+@import url(./_active/header__link-item_active.css);
+@import url(./_inactive/header__link-item_inactive.css);
+
+.header__link-item {
+  padding-bottom: 16px;
+  margin: 0 0 0 11px;
+}
+
+.header__link-item:hover {
+  border-bottom: solid 3px;
+  color: inherit;
+}
+
+.header__link-item:active {
+  opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  .header__link-item {
+    margin: 0 0 0 34px;
+  }
+}

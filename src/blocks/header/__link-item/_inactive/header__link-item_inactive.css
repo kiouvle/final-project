@@ -1,0 +1,7 @@
+.header__link-item_inactive {
+  border-bottom: transparent solid 3px;
+}
+
+.header__link-item_inactive .header__link {
+  color: #B6BCBF;
+}

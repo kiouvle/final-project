@@ -1,0 +1,6 @@
+@import url(./__item/link-list__item.css);
+
+.link-list {
+  margin: 0;
+  padding-left: 0;
+}

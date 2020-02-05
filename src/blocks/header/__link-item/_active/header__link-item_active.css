@@ -1,0 +1,8 @@
+.header__link-item_active {
+  border-bottom: solid 3px;
+  border-color: #1A1B22;
+}
+
+.header__link-item_active .header__link {
+  color: inherit;
+}

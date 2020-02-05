@@ -2,7 +2,7 @@
 @import url(./__title/header__title.css);
 @import url(./__link-container/header__link-container.css);
 @import url(./_theme/_light/header_theme_light.css);
-
+@import url(./__link-item/header__link-item.css);
 
 .header {
   display: flex;
