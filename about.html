@@ -9,17 +9,19 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-  <link rel="stylesheet" href="style.f219bcca04ddc8a6ab03.css">
+  <link rel="stylesheet" href="./styles/style.205986caa4da12cc9e3e.css">
 </head>
 
 <body>
   <div class="page">
     <header class="header">
       <span class="header__title">NewsAnalyzer</span>
-      <div class="header__link-container">
-        <a class="header__link header__link_inactive" href="index.html">Главная</a>
-        <a class="header__link header__link_active" href="about.html">О проекте</a>
-      </div>
+      <ul class="header__link-container link-list">
+        <li class="link-list__item header__link-item header__link-item_inactive"><a class="header__link"
+            href="index.html">Главная</a></li>
+        <li class="link-list__item header__link-item header__link-item_active"><a class="header__link"
+            href="about.html">О проекте</a></li>
+      </ul>
     </header>
     <section class="clients">
       <h2 class="clients__title">Клиентам</h2>
@@ -59,7 +61,10 @@
       </div>
     </section>
     <section class="author">
-      <div class="author__pic"></div>
+      <picture>
+        <source media="(max-width: 768px)" srcset="./images/me.jpg">
+        <img class="author__pic" src="./images/me@2x.jpg" alt="me">
+      </picture>
       <div class="author__text">
         <h2 class="author__title">Об авторе</h2>
         <p class="author__info_about">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы
@@ -136,12 +141,12 @@
       <button type="submit" class="button commits__button">Открыть в GitHub</button>
     </section>
     <footer class="footer">
-      <div class="footer__link-container">
-        <a class="footer__link" href="index.html">Главная</a>
-        <a class="footer__link" href="about.html">О проекте</a>
-        <a class="footer__link" href="https://praktikum.yandex.ru/profile/frontend-developer/"
-          target="_blank">Яндекс.Практикум</a>
-      </div>
+      <ul class="footer__link-container link-list">
+        <li class="link-list__item"><a class="footer__link" href="index.html">Главная</a></li>
+        <li class="link-list__item"><a class="footer__link" href="about.html">О проекте</a></li>
+        <li class="link-list__item"><a class="footer__link"
+            href="https://praktikum.yandex.ru/profile/frontend-developer/" target="_blank">Яндекс.Практикум</a></li>
+      </ul>
       <div class="footer__social-container">
         <a class="footer__social" href="https://github.com/kiouvle" target="_blank"><img
             src="./images/git-logo.svg" alt="git"></a>
@@ -151,7 +156,7 @@
       <p class="footer__copyright">&#169; 2019 Supersite</p>
     </footer>
   </div>
-  <script src="about.83c8bca1a5ad16e5cf99.js"></script>
+  <script src="./scripts/about.83c8bca1a5ad16e5cf99.js"></script>
 </body>
 
 </html>
