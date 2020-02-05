@@ -1,4 +1,4 @@
-# Yandex Praktikum Final Project - News Analyzer v0.1
+# Yandex Praktikum Final Project - News Analyzer v0.2
 https://kiouvle.github.io/final-project/
 
 Перед вами сервис для анализа происходящих в мире событий. Его задача — установить, насколько популярны новости на определённую тему.
