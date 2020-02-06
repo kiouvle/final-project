@@ -1,0 +1,10 @@
+.link-list_footer {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+@media (min-width: 768px) {
+  .link-list_footer {
+    margin: 0;
+  }
+}

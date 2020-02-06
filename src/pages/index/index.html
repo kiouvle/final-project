@@ -21,7 +21,7 @@
       <header class="header header_theme_light">
         <!--changes color of the header-->
         <span class="header__title">NewsAnalyzer</span>
-        <ul class="header__link-container link-list">
+        <ul class="header__link-container link-list_header">
           <li class="link-list__item header__link-item header__link-item_active"><a class="header__link"
               href="index.html">Главная</a></li>
           <li class="link-list__item header__link-item header__link-item_inactive"><a class="header__link"
@@ -88,7 +88,8 @@
       <button type="submit" class="button result__button">Показать еще</button>
     </section>
     <section class="author">
-      <picture>
+      <picture class="author__pic-container">
+        <source media="(max-width: 320px)" srcset="<%=require('../../images/me@tiny.jpg').default%>">
         <source media="(max-width: 768px)" srcset="<%=require('../../images/me.jpg').default%>">
         <img class="author__pic" src="<%=require('../../images/me@2x.jpg').default%>" alt="me">
       </picture>
@@ -103,7 +104,7 @@
       </div>
     </section>
     <footer class="footer">
-      <ul class="footer__link-container link-list">
+      <ul class="footer__link-container link-list_footer">
         <li class="link-list__item"><a class="footer__link" href="index.html">Главная</a></li>
         <li class="link-list__item"><a class="footer__link" href="about.html">О проекте</a></li>
         <li class="link-list__item"><a class="footer__link" href="https://praktikum.yandex.ru/profile/frontend-developer/"

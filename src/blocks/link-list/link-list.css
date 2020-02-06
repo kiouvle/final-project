@@ -1,6 +1,4 @@
 @import url(./__item/link-list__item.css);
+@import url(./_footer/link-list_footer.css);
+@import url(./_header/link-list_header.css);
 
-.link-list {
-  margin: 0;
-  padding-left: 0;
-}
