@@ -1,5 +1,6 @@
 @import url(./__message/preloader__message.css);
 @import url(./__pic/preloader__pic.css);
+@import url(./_hidden/preloader_hidden.css);
 
 .preloader {
   background: #F5F6F7;
