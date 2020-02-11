@@ -23,7 +23,7 @@
 
 @media (min-width: 768px) {
   .result__button {
-    margin-top: 32px;
+    margin-top: 16px;
     width: 240px;
     align-self: center;
   }
@@ -31,6 +31,6 @@
 
 @media (min-width: 1440px) {
   .result__button {
-    margin-top: 64px;
+    margin-top: 48px;
   }
 }

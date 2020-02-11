@@ -18,7 +18,7 @@
 @media (min-width: 768px) {
   .result-card {
     width: 32.5%;
-    margin-bottom: 0;
+    margin-bottom: 16px;
     border-radius: 20px;
     min-height: 420px;
   }
