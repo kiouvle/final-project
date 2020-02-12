@@ -1,3 +1,5 @@
+import {getCurrentDate, getDateWeekAgo} from '../utils/dateHelper';
+
 export default class NewsApi {
   constructor(options) {
     this.baseUrl = options.baseUrl;
@@ -7,7 +9,7 @@ export default class NewsApi {
   getNews(searchText) {
     const url = new URL(`${this.baseUrl}/everything`)
     // TODO вычислять даты динамически
-    const params = {apiKey: this.apiKey, q: searchText, from: '2020-02-01', to: '2020-02-08', pageSize: 100} 
+    const params = {apiKey: this.apiKey, q: searchText, from: getDateWeekAgo(), to: getCurrentDate(), pageSize: 100} 
 
     url.search = new URLSearchParams(params).toString();
 
