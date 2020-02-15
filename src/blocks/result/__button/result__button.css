@@ -1,3 +1,5 @@
+@import url(./_hidden/result__button_hidden.css);
+
 .result__button {
   background: #FFFFFF;
   border-radius: 80px;  

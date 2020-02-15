@@ -20,7 +20,11 @@ export default class NewsCardList {
 
   showMore() {
     this._cardsContainer.insertAdjacentHTML('beforeend', this._cardsArray.splice(0,3).map((card) => this.addCard(card)).join(''));
-
+    if (this._cardsArray.length === 0) {
+      this._newsButton.classList.add('result__button_hidden');
+    } else {
+      this._newsButton.classList.remove('result__button_hidden');
+    }
   }
 
   render(cardsArray) {
