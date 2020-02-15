@@ -19,17 +19,19 @@ import {newsApiConfig} from '../../js/constants/constants';
   const searchInput = new SearchInput(document.querySelector('.search'), function (searchText) {
     preloader.show();
     notFound.hide();
+    newsCardList.hide();
     newsApi.getNews(searchText)
       .then((result) => {
         preloader.hide();
-        newsCardList.show();
-        newsCardList.render(result.articles);
         dataStorage.setSearchText(searchText);
         dataStorage.setNews(result.articles);
         dataStorage.setNewsNumber(result.totalResults);
         if (result.totalResults === 0) {
-          notFound.show()
-        } 
+          notFound.show();
+        } else {
+          newsCardList.show();
+          newsCardList.render(result.articles);
+        }
       })
       .catch((err) => { console.log(err); preloader.hide(); });
 
