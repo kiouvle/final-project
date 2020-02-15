@@ -13,13 +13,13 @@ export default class NewsCardList {
   hide() {
     this._container.classList.add('result_hidden');
   }
-  
+
   show() {
     this._container.classList.remove('result_hidden');
   }
 
   showMore() {
-    this._cardsContainer.insertAdjacentHTML('beforeend', this._cardsArray.splice(0,3).map((card) => this.addCard(card)).join(''));
+    this._cardsContainer.insertAdjacentHTML('beforeend', this._cardsArray.splice(0, 3).map((card) => this.addCard(card)).join(''));
     if (this._cardsArray.length === 0) {
       this._newsButton.classList.add('result__button_hidden');
     } else {
@@ -28,8 +28,9 @@ export default class NewsCardList {
   }
 
   render(cardsArray) {
-this._cardsArray = cardsArray;
-  this.showMore();
+    this._cardsArray = cardsArray;
+    this._cardsContainer.innerHTML = '';
+    this.showMore();
 
   }
 
