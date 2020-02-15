@@ -29,7 +29,9 @@ export default class NewsCardList {
 
   render(cardsArray) {
     this._cardsArray = cardsArray;
-    this._cardsContainer.innerHTML = '';
+     while (this._cardsContainer.firstChild){
+       this._cardsContainer.removeChild(this._cardsContainer.firstChild);
+     };
     this.showMore();
 
   }
