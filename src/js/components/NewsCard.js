@@ -1,4 +1,4 @@
-import {getFormatDate} from '../utils/dateHelper';
+import {getHumanDate} from '../utils/dateHelper';
 
 export default class NewsCard {
   constructor(card) {
@@ -7,16 +7,15 @@ export default class NewsCard {
   }
 
   create() {
-  const date = new Date(this._card.publishedAt);
-  const formatedDate = getFormatDate(date);
-   return `<div class="result-card">
+  const formatedDate = getHumanDate(this._card.publishedAt);
+   return `<a class="result-card" href="${this._card.url}" target="_blank">
           <img class="result-card__photo" src="${this._card.urlToImage}" alt="${this._card.title}">
           <div class="result-card__info">
             <p class="result-card__date">${formatedDate}</p>
             <h4 class="result-card__title">${this._card.title}</h4>
             <p class="result-card__text">${this._card.description}</p>
-            <a class="result-card__source">${this._card.source.name}</a>
+            <p class="result-card__source">${this._card.source.name}</p>
           </div>
-        </div>`
+        </a>`
   }
 }

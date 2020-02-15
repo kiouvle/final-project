@@ -3,6 +3,7 @@
 @import url(./__button/result__button.css);
 @import url(./__head/result__head.css);
 @import url(./__card-container/result__card-container.css);
+@import url(./_hidden/result_hidden.css);
 
 
 .result {

@@ -6,6 +6,7 @@ import NotFound from '../../js/components/NotFound';
 import NewsCardList from '../../js/components/NewsCardList';
 import DataStorage from '../../js/modules/DataStorage';
 
+
 (function () {
   const serverUrl = NODE_ENV === 'development' ? 'https://newsapi.org/v2' : 'https://newsapi.org/v2';
   const newsApi = new NewsApi({
@@ -24,6 +25,7 @@ import DataStorage from '../../js/modules/DataStorage';
     newsApi.getNews(searchText)
       .then((result) => {
         preloader.hide();
+        newsCardList.show();
         newsCardList.render(result.articles);
         dataStorage.setSearchText(searchText);
         dataStorage.setNews(result.articles);

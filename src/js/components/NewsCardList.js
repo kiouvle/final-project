@@ -10,6 +10,14 @@ export default class NewsCardList {
     })
   }
 
+  hide() {
+    this._container.classList.add('result_hidden');
+  }
+  
+  show() {
+    this._container.classList.remove('result_hidden');
+  }
+
   showMore() {
     this._cardsContainer.insertAdjacentHTML('beforeend', this._cardsArray.splice(0,3).map((card) => this.addCard(card)).join(''));
 
