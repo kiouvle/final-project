@@ -5,14 +5,11 @@ import Preloader from '../../js/components/Preloader';
 import NotFound from '../../js/components/NotFound';
 import NewsCardList from '../../js/components/NewsCardList';
 import DataStorage from '../../js/modules/DataStorage';
+import {newsApiConfig} from '../../js/constants/constants';
 
 
 (function () {
-  const serverUrl = NODE_ENV === 'development' ? 'https://newsapi.org/v2' : 'https://newsapi.org/v2';
-  const newsApi = new NewsApi({
-    baseUrl: serverUrl,
-    apiKey: 'e2b345173b0a4b8b8c6d88b387688e25'
-  })
+  const newsApi = new NewsApi(newsApiConfig);
 
   const preloader = new Preloader(document.querySelector('.preloader'));
   const notFound = new NotFound(document.querySelector('.not-found'));
