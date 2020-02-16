@@ -1,4 +1,4 @@
-export default class NotFound {
+export default class NoResultBlock {
   constructor(container) {
     this._container = container;
   }
