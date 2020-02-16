@@ -7,7 +7,7 @@ import CommitsCard from '../../js/components/CommitsCard';
 
 
 const githubApi = new GithubApi(githubApiConfig);
-const commitsCardList = new CommitsCardList(document.querySelector('.commits'), CommitsCard);
+const commitsCardList = new CommitsCardList(document.querySelector('.commits'), addCommitsCard);
 
 githubApi.getCommits('kiouvle', 'final-project')
   .then((result) => {
@@ -15,3 +15,8 @@ githubApi.getCommits('kiouvle', 'final-project')
     const mySwiper = new Swiper('.swiper__container', swiperConfig);
   })
   .catch((err) => { console.log(err); });
+
+  function addCommitsCard(card) {
+    const commitsCard = new CommitsCard(card);
+    return commitsCard.create();
+  }

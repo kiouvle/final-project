@@ -11,8 +11,13 @@ const newsApi = new NewsApi(newsApiConfig);
 
 const preloader = new HiddenElement(document.querySelector('.preloader'), 'preloader_hidden');
 const noResultBlock = new HiddenElement(document.querySelector('.not-found'), 'not-found_hidden');
-const newsCardList = new NewsCardList(document.querySelector('.result'), NewsCard);
+const newsCardList = new NewsCardList(document.querySelector('.result'), addNewsCard);
 const dataStorage = new DataStorage();
+
+function addNewsCard(card) {
+  const newsCard = new NewsCard(card);
+  return newsCard.create();
+}
 
 function handleSearch(searchText) {
   preloader.show();

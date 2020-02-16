@@ -1,18 +1,13 @@
 export default class CommitsCardList {
-  constructor(container, commitCardClass) {
+  constructor(container, renderItemFunction) {
     this._container = container;
     this._cardsContainer = this._container.querySelector('.commits__container');
-    this._commitCardClass = commitCardClass;
+    this._renderItemFunction = renderItemFunction;
   }
 
   render(cardsArray) {
 
-    this._cardsContainer.insertAdjacentHTML('afterbegin', cardsArray.map((card) => this.addCard(card)).join(''));
+    this._cardsContainer.insertAdjacentHTML('afterbegin', cardsArray.map((card) => this._renderItemFunction(card)).join(''));
 
-  }
-
-  addCard(card) {
-    const commitsCard = new this._commitCardClass(card);
-    return commitsCard.create();
   }
 }
