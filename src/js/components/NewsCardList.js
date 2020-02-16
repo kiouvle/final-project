@@ -1,21 +1,16 @@
 import NewsCard from './NewsCard';
+import HiddenElement from './HiddenElement';
 
-export default class NewsCardList {
+export default class NewsCardList extends HiddenElement {
   constructor(container) {
+    super(container, 'result_hidden');
+    
     this._container = container;
     this._cardsContainer = this._container.querySelector('.result__card-container');
     this._newsButton = this._container.querySelector('.result__button');
     this._newsButton.addEventListener('click', () => {
       this.showMore();
     })
-  }
-
-  hide() {
-    this._container.classList.add('result_hidden');
-  }
-
-  show() {
-    this._container.classList.remove('result_hidden');
   }
 
   showMore() {
