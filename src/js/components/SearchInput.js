@@ -5,6 +5,7 @@ export default class SearchInput {
     this._input = this._container.querySelector('.search__text');
     this._input.addEventListener('invalid', () => { this._handleInvalid() });
     this._input.addEventListener('input', () => { this._handleInput() });
+    this._searchButton  = this._container.querySelector('.search__button');
     this._searchForm = this._container.querySelector('.search__bar');
     this._searchForm.addEventListener('submit', () => {
       event.preventDefault();
@@ -21,9 +22,18 @@ export default class SearchInput {
   }
 
   search() {
-
     const searchText = this._input.value;
     this._callback(searchText);
+  }
+
+  lockForm() {
+    this._input.setAttribute('disabled', 1);
+    this._searchButton.setAttribute('disabled', 1);
+  }
+
+  unlockForm() {
+    this._input.removeAttribute('disabled');
+    this._searchButton.removeAttribute('disabled');
   }
 
 }

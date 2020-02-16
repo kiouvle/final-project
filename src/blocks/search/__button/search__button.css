@@ -21,6 +21,10 @@
   outline: none;
 }
 
+.search__button:disabled {
+  color: #F5F6F7;
+}
+
 @media (min-width: 768px) {
   .search__button {
     width: 160px;

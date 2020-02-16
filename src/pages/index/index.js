@@ -18,11 +18,13 @@ import NewsCard from '../../js/components/NewsCard';
 
   const searchInput = new SearchInput(document.querySelector('.search'), function (searchText) {
     preloader.show();
+    searchInput.lockForm();
     noResultBlock.hide();
     newsCardList.hide();
     newsApi.getNews(searchText)
       .then((result) => {
         preloader.hide();
+        searchInput.unlockForm();
         dataStorage.setSearchText(searchText);
         dataStorage.setNews(result.articles);
         dataStorage.setNewsNumber(result.totalResults);
@@ -33,7 +35,11 @@ import NewsCard from '../../js/components/NewsCard';
           newsCardList.render(result.articles);
         }
       })
-      .catch((err) => { console.log(err); preloader.hide(); });
+      .catch((err) => { 
+        console.log(err); 
+        preloader.hide();
+        searchInput.unlockForm();
+       });
 
   })
 

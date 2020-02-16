@@ -20,6 +20,10 @@
   color: #B6BCBF;
 }
 
+.search__text:disabled {
+  background-color: #F5F6F7;
+}
+
 @media (min-width: 768px) {
   .search__text {
     margin: 0;
