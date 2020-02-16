@@ -5,6 +5,7 @@ import NewsCardList from '../../js/components/NewsCardList';
 import DataStorage from '../../js/modules/DataStorage';
 import {newsApiConfig} from '../../js/constants/constants';
 import HiddenElement from '../../js/components/HiddenElement';
+import NewsCard from '../../js/components/NewsCard';
 
 
 (function () {
@@ -12,7 +13,7 @@ import HiddenElement from '../../js/components/HiddenElement';
 
   const preloader = new HiddenElement(document.querySelector('.preloader'), 'preloader_hidden');
   const noResultBlock = new HiddenElement(document.querySelector('.not-found'), 'not-found_hidden');
-  const newsCardList = new NewsCardList(document.querySelector('.result'));  
+  const newsCardList = new NewsCardList(document.querySelector('.result'), NewsCard);  
   const dataStorage = new DataStorage(); 
 
   const searchInput = new SearchInput(document.querySelector('.search'), function (searchText) {

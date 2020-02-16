@@ -1,11 +1,11 @@
-import NewsCard from './NewsCard';
 import HiddenElement from './HiddenElement';
 
 export default class NewsCardList extends HiddenElement {
-  constructor(container) {
+  constructor(container, newsCardClass) {
     super(container, 'result_hidden');
 
     this._container = container;
+    this._newsCardClass = newsCardClass;
     this._cardsContainer = this._container.querySelector('.result__card-container');
     this._newsButton = this._container.querySelector('.result__button');
     this._newsButton.addEventListener('click', () => {
@@ -30,7 +30,7 @@ export default class NewsCardList extends HiddenElement {
   }
 
   addCard(card) {
-    const newsCard = new NewsCard(card);
+    const newsCard = new this._newsCardClass(card);
     return newsCard.create();
   }
 }

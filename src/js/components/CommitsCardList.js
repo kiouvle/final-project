@@ -1,9 +1,8 @@
-import CommitsCard from './CommitsCard';
-
 export default class CommitsCardList {
-  constructor(container) {
+  constructor(container, commitCardClass) {
     this._container = container;
     this._cardsContainer = this._container.querySelector('.commits__container');
+    this._commitCardClass = commitCardClass;
   }
 
   render(cardsArray) {
@@ -13,7 +12,7 @@ export default class CommitsCardList {
   }
 
   addCard(card) {
-    const commitsCard = new CommitsCard(card);
+    const commitsCard = new this._commitCardClass(card);
     return commitsCard.create();
   }
 }
