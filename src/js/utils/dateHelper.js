@@ -20,7 +20,7 @@ export function getFormatDate(date) {
 }
 
 export function getHumanDate(dateString) {
-  const monthsArray = [
+  const months = [
     'января',
     'февраля',
     'марта',
@@ -35,13 +35,13 @@ export function getHumanDate(dateString) {
     'декабря',
   ];
   const date = new Date(dateString);
-  const monthName = monthsArray[date.getMonth()];
+  const monthName = months[date.getMonth()];
 
   return `${date.getDate()} ${monthName}, ${date.getFullYear()}`;
 }
 
 export function getDayOfWeek(dayNumber) {
-  const weekArray = [
+  const days = [
     'вс',
     'пн',
     'вт',
@@ -51,5 +51,5 @@ export function getDayOfWeek(dayNumber) {
     'сб',
   ]
 
-  return weekArray[dayNumber];
+  return days[dayNumber];
 }
