@@ -1,18 +1,17 @@
 import "./index.css";
 import NewsApi from '../../js/modules/NewsApi';
 import SearchInput from '../../js/components/SearchInput';
-import Preloader from '../../js/components/Preloader';
-import NoResultBlock from '../../js/components/NoResultBlock';
 import NewsCardList from '../../js/components/NewsCardList';
 import DataStorage from '../../js/modules/DataStorage';
 import {newsApiConfig} from '../../js/constants/constants';
+import HiddenElement from '../../js/components/HiddenElement';
 
 
 (function () {
   const newsApi = new NewsApi(newsApiConfig);
 
-  const preloader = new Preloader(document.querySelector('.preloader'));
-  const noResultBlock = new NoResultBlock(document.querySelector('.not-found'));
+  const preloader = new HiddenElement(document.querySelector('.preloader'), 'preloader_hidden');
+  const noResultBlock = new HiddenElement(document.querySelector('.not-found'), 'not-found_hidden');
   const newsCardList = new NewsCardList(document.querySelector('.result'));  
   const dataStorage = new DataStorage(); 
 
