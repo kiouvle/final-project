@@ -1,13 +1,7 @@
-export default class NoResultBlock {
-  constructor(container) {
-    this._container = container;
-  }
+import HiddenElement from './HiddenElement';
 
-  hide() {
-    this._container.classList.add('not-found_hidden');
-  }
-  
-  show() {
-    this._container.classList.remove('not-found_hidden');
+export default class NoResultBlock extends HiddenElement {
+  constructor(container) {
+    super(container, 'not-found_hidden');
   }
 }

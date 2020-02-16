@@ -1,13 +1,7 @@
-export default class Preloader {
-  constructor(container) {
-    this._container = container;
-  }
+import HiddenElement from './HiddenElement';
 
-  hide() {
-    this._container.classList.add('preloader_hidden');
-  }
-  
-  show() {
-    this._container.classList.remove('preloader_hidden');
+export default class Preloader extends HiddenElement {
+  constructor(container) {
+    super(container, 'preloader_hidden');
   }
 }
