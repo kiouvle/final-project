@@ -3,14 +3,16 @@ export default class SearchInput {
     this._container = container;
     this._callback = callback;
     this._input = this._container.querySelector('.search__text');
-    this._input.addEventListener('invalid', () => { this._handleInvalid() });
-    this._input.addEventListener('input', () => { this._handleInput() });
+    this._input.addEventListener('invalid', this._handleInvalid.bind(this));
+    this._input.addEventListener('input', this._handleInput.bind(this));
     this._searchButton  = this._container.querySelector('.search__button');
     this._searchForm = this._container.querySelector('.search__bar');
-    this._searchForm.addEventListener('submit', () => {
-      event.preventDefault();
-      this.search()
-    });
+    this._searchForm.addEventListener('submit', this._handleSubmit.bind(this));
+  }
+
+  _handleSubmit(event) {
+    event.preventDefault();
+    this.search()
   }
 
   _handleInvalid() {

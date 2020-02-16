@@ -8,9 +8,11 @@ export default class NewsCardList extends HiddenElement {
     this._newsCardClass = newsCardClass;
     this._cardsContainer = this._container.querySelector('.result__card-container');
     this._newsButton = this._container.querySelector('.result__button');
-    this._newsButton.addEventListener('click', () => {
-      this._showMore();
-    })
+    this._newsButton.addEventListener('click', this._handleClick.bind(this));
+  }
+
+  _handleClick() {
+    this._showMore();
   }
 
   _showMore() {
