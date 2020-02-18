@@ -4,8 +4,9 @@
   position: absolute;
   width: max-content;
   bottom:-3px;
-  left: 42%;
+  transform: translate(-50%);
   z-index: 1;
+  margin-left: 50%;
 }
 
 /*pagination dots*/
@@ -16,14 +17,12 @@
 @media (min-width: 768px) {
   .swiper__container .swiper__pagination {
     bottom: 2px;
-    left: 47%;
   }
 }
 
 @media (min-width: 1440px) {
   .swiper__container .swiper__pagination {
     bottom: 0;
-    left: 49.5%;
 
   }
 }

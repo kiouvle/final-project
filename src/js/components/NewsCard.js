@@ -13,8 +13,8 @@ export default class NewsCard {
           <img class="result-card__photo" src="${this._card.urlToImage}" alt="${this._card.title}">
           <div class="result-card__info">
             <p class="result-card__date">${formatedDate}</p>
-            <h4 class="result-card__title">${this._card.title}</h4>
-            <p class="result-card__text">${this._card.description}</p>
+            <h4 class="result-card__title">${this._card.title.substring(0,25)}...</h4>
+            <p class="result-card__text">${this._card.description.substring(0,90)}...</p>
             <p class="result-card__source">${this._card.source.name}</p>
           </div>
         </a>`
