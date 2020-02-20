@@ -6,12 +6,14 @@ import DataStorage from '../../js/modules/DataStorage';
 import { newsApiConfig } from '../../js/constants/constants';
 import HiddenElement from '../../js/components/HiddenElement';
 import NewsCard from '../../js/components/NewsCard';
+import NoResultBlock from '../../js/components/NoResultBlock';
 
 const newsApi = new NewsApi(newsApiConfig);
 
 const preloader = new HiddenElement(document.querySelector('.preloader'), 'preloader_hidden');
-const noResultBlock = new HiddenElement(document.querySelector('.not-found'), 'not-found_hidden');
+const noResultBlock = new NoResultBlock(document.querySelector('.not-found'));
 const newsCardList = new NewsCardList(document.querySelector('.result'), addNewsCard);
+
 
 const dataStorage = new DataStorage();
 const searchTextFromDataStorage = dataStorage.getSearchText();
@@ -25,7 +27,7 @@ function addNewsCard(card) {
 
 function renderNewsFromData(totalResults, news) {
   if (totalResults === 0) {
-    noResultBlock.show();
+    noResultBlock.showNotFoundMessage();
   } else {
     newsCardList.show();
     newsCardList.render(news);
@@ -54,9 +56,9 @@ function handleSearch(searchText) {
       renderNewsFromData(result.totalResults, result.articles);      
     })
     .catch((err) => {
-      
       preloader.hide();
       searchInput.unlockForm();
+      noResultBlock.showServerErrorMessage();
     });
 }
 
