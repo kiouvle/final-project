@@ -1,22 +1,24 @@
 import HiddenElement from '../base/HiddenElement';
 
-export default class NewsCardList extends HiddenElement {
+export default class NewsCardList extends HiddenElement { // список новостей
   constructor(container, renderNewsCardFunction) {
     super(container, 'result_hidden');
 
-    this._container = container;
-    this._renderNewsCardFunction = renderNewsCardFunction;
-    this._cardsContainer = this._container.querySelector('.result__card-container');
-    this._newsButton = this._container.querySelector('.result__button');
+    this._renderNewsCardFunction = renderNewsCardFunction;  // функция для отрисовки карточек
+    this._cardsContainer = this.findElement('.result__card-container');
+    this._newsButton = this.findElement('.result__button');
     this._newsButton.addEventListener('click', this._handleClick.bind(this));
   }
 
-  _handleClick() {
+  _handleClick() {    // обработчик кнопки показать еще
     this._showMore();
   }
 
-  _showMore() {
-    this._cardsContainer.insertAdjacentHTML('beforeend', this._cardsArray.splice(0, 3).map((card) => this._renderNewsCardFunction(card)).join(''));
+  _showMore() { //метод дорисовки новостей
+    const numberOfNewsPerPage = 3;
+
+    this._cardsContainer.insertAdjacentHTML('beforeend', this._cardsArray.splice(0, numberOfNewsPerPage).map((card) => this._renderNewsCardFunction(card)).join(''));
+    
     if (this._cardsArray.length === 0) {
       this._newsButton.classList.add('result__button_hidden');
     } else {
@@ -27,7 +29,7 @@ export default class NewsCardList extends HiddenElement {
   render(cardsArray) {
     this._cardsArray = cardsArray;
     this._cardsContainer.innerHTML = '';
+    
     this._showMore();
-
   }
 }

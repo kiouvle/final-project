@@ -1,9 +1,12 @@
-export default class Request {
+import BaseComponent from '../base/BaseComponent';
+
+export default class Request extends BaseComponent { //информация о запросе на странице аналитики
   constructor(container) {
-    this._container = container;
-    this._title = this._container.querySelector('.request__title');
-    this._newsNumber = this._container.querySelector('.request__number_news');
-    this._titleNumber  = this._container.querySelector('.request__number_titles');
+    super(container);
+
+    this._title = this.findElement('.request__title');
+    this._newsNumber = this.findElement('.request__number_news');
+    this._titleNumber  = this.findElement('.request__number_titles');
   }
 
   changeTitle(titleText) {

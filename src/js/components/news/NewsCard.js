@@ -1,7 +1,7 @@
 import {getHumanDate} from '../../utils/dateHelper';
 import {sanitizeHTML} from '../../utils/htmlHelper';
 
-export default class NewsCard {
+export default class NewsCard {  // новостные карточки
   constructor(card) {
     this._card = card;
     

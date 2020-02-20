@@ -25,7 +25,7 @@ function addNewsCard(card) {
   return newsCard.create();
 }
 
-function renderNewsFromData(totalResults, news) {
+function renderNewsFromData(totalResults, news) { //отрисовка новостей из данных
   if (totalResults === 0) {
     noResultBlock.showNotFoundMessage();
   } else {
@@ -36,40 +36,43 @@ function renderNewsFromData(totalResults, news) {
 
 function hideBlocksBeforeRender() {
   noResultBlock.hide();
-  newsCardList.hide();  
+  newsCardList.hide();
 }
 
-function handleSearch(searchText) {
+function handleSearch(event) {
+  const searchText = event.detail;
+
   searchInput.lockForm();
-  preloader.show();  
+  preloader.show();
 
   hideBlocksBeforeRender();
 
-  newsApi.getNews(searchText)
-    .then((result) => {
+  newsApi.getNews(searchText)  //поиск новостей
+    .then((result) => { //успех
       preloader.hide();
       searchInput.unlockForm();
       dataStorage.setSearchText(searchText);
       dataStorage.setNews(result.articles);
       dataStorage.setNewsNumber(result.totalResults);
-      
-      renderNewsFromData(result.totalResults, result.articles);      
+
+      renderNewsFromData(result.totalResults, result.articles);
     })
-    .catch((err) => {
+    .catch((err) => {  //ошибка
+      console.log(err);
       preloader.hide();
       searchInput.unlockForm();
       noResultBlock.showServerErrorMessage();
     });
 }
 
-const searchInput = new SearchInput(document.querySelector('.search'), handleSearch);
+const searchInput = new SearchInput(document.querySelector('.search'), [{ event: 'search', handler: handleSearch }]);
 
-function checkDataStorageData() {
+function checkDataStorageData() {  //проверка локального хранилища на наличие данных
   if (searchTextFromDataStorage) {
     searchInput.setSearchText(searchTextFromDataStorage);
     hideBlocksBeforeRender();
     renderNewsFromData(totalResultsFromDataStorage, newsFromDataStorage);
-  } 
+  }
 }
 
 checkDataStorageData();

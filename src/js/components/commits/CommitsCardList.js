@@ -1,7 +1,9 @@
-export default class CommitsCardList {
+import BaseComponent from '../base/BaseComponent';
+
+export default class CommitsCardList extends BaseComponent { // список коммитов
   constructor(container, renderItemFunction) {
-    this._container = container;
-    this._cardsContainer = this._container.querySelector('.commits__container');
+ super(container);
+    this._cardsContainer = this.findElement('.commits__container');
     this._renderItemFunction = renderItemFunction;
   }
 

@@ -1,14 +1,14 @@
 import {getHumanDate} from '../../utils/dateHelper';
 import {sanitizeHTML} from '../../utils/htmlHelper';
 
-export default class CommitsCard {
+export default class CommitsCard {  //класс рисования карточек
   constructor(card) {
     this._card = card;
     
   }
 
   create() {
-    const formatedDate = getHumanDate(this._card.commit.committer.date);
+    const formatedDate = getHumanDate(this._card.commit.committer.date);  //менять дату в соответствии с макетом
 
    return `<div class="swiper-slide commits-card">
    <p class="commits-card__date">${formatedDate}</p>

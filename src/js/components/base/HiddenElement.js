@@ -1,13 +1,16 @@
-export default class HiddenElement {
+import BaseComponent from './BaseComponent';
+
+export default class HiddenElement extends BaseComponent {  
   constructor(container, hiddenClass) {
-    this._container = container;
+    super(container);  //вызов конструктора класса BaseComponent
+
     this._hiddenClass = hiddenClass;
   }
-  hide() {
+  hide() {  //метод скрытия ненужных элементов
     this._container.classList.add(this._hiddenClass);
   }
   
-  show() {
+  show() { //метод показа элементов
     this._container.classList.remove(this._hiddenClass);
   }
 }
