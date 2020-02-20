@@ -1,5 +1,5 @@
-import {getDayOfWeek} from '../utils/dateHelper';
-import {getOccurenceNumber} from '../utils/stringHelper';
+import {getDayOfWeek} from '../../utils/dateHelper';
+import {getOccurenceNumber} from '../../utils/stringHelper';
 
 export default class Statistics {
   constructor(container, newsObj, searchString) {

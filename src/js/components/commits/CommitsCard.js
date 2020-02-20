@@ -1,4 +1,4 @@
-import {getHumanDate} from '../utils/dateHelper';
+import {getHumanDate} from '../../utils/dateHelper';
 
 export default class CommitsCard {
   constructor(card) {

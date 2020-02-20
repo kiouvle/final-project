@@ -1,9 +1,9 @@
 import "./about.css";
 import GithubApi from '../../js/modules/GithubApi';
-import CommitsCardList from '../../js/components/CommitsCardList';
+import CommitsCardList from '../../js/components/commits/CommitsCardList';
 import Swiper from 'swiper';
 import { githubApiConfig, swiperConfig } from '../../js/constants/constants'
-import CommitsCard from '../../js/components/CommitsCard';
+import CommitsCard from '../../js/components/commits/CommitsCard';
 
 
 const githubApi = new GithubApi(githubApiConfig);

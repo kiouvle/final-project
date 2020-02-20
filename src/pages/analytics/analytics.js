@@ -1,8 +1,8 @@
 import "./analytics.css";
 import "../../blocks/chart/chart";
 import DataStorage from '../../js/modules/DataStorage';
-import Request from '../../js/components/Request';
-import Statistics from '../../js/components/Statistics';
+import Request from '../../js/components/request/Request';
+import Statistics from '../../js/components/statistics/Statistics';
 import { getOccurenceNumber } from '../../js/utils/stringHelper';
 
 const dataStorage = new DataStorage();
