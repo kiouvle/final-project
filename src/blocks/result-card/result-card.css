@@ -4,6 +4,7 @@
 @import url(./__text/result-card__text.css);
 @import url(./__title/result-card__title.css);
 @import url(./__info/result-card__info.css);
+@import url(./__photo-wrapper/result-card__photo-wrapper.css);
 
 .result-card {
   width: 100%;
@@ -15,7 +16,8 @@
   position: relative;
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {
@@ -33,3 +35,4 @@
     height: 576px;
   }
 }
+

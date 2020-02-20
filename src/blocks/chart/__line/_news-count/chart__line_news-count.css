@@ -1,4 +1,6 @@
 @import url(./_num/chart__line_news-count_num.css);
+@import url(./_zero/chart__line_news-count_zero.css);
+
 
 .chart__line_news-count {
   letter-spacing: 0.4px;
@@ -17,13 +19,6 @@
 @media (min-width: 768px) {
   .chart__line_news-count {
     margin-bottom: 3px;
-
-  }
-
-}
-
-@media (min-width: 1440px) {
-  .chart__line_news-count {
-
   }
 }
+

@@ -12,18 +12,37 @@ const newsApi = new NewsApi(newsApiConfig);
 const preloader = new HiddenElement(document.querySelector('.preloader'), 'preloader_hidden');
 const noResultBlock = new HiddenElement(document.querySelector('.not-found'), 'not-found_hidden');
 const newsCardList = new NewsCardList(document.querySelector('.result'), addNewsCard);
+
 const dataStorage = new DataStorage();
+const searchTextFromDataStorage = dataStorage.getSearchText();
+const newsFromDataStorage = dataStorage.getNews();
+const totalResultsFromDataStorage = dataStorage.getNewsNumber();
 
 function addNewsCard(card) {
   const newsCard = new NewsCard(card);
   return newsCard.create();
 }
 
-function handleSearch(searchText) {
-  preloader.show();
-  searchInput.lockForm();
+function renderNewsFromData(totalResults, news) {
+  if (totalResults === 0) {
+    noResultBlock.show();
+  } else {
+    newsCardList.show();
+    newsCardList.render(news);
+  }
+}
+
+function hideBlocksBeforeRender() {
   noResultBlock.hide();
-  newsCardList.hide();
+  newsCardList.hide();  
+}
+
+function handleSearch(searchText) {
+  searchInput.lockForm();
+  preloader.show();  
+
+  hideBlocksBeforeRender();
+
   newsApi.getNews(searchText)
     .then((result) => {
       preloader.hide();
@@ -31,15 +50,11 @@ function handleSearch(searchText) {
       dataStorage.setSearchText(searchText);
       dataStorage.setNews(result.articles);
       dataStorage.setNewsNumber(result.totalResults);
-      if (result.totalResults === 0) {
-        noResultBlock.show();
-      } else {
-        newsCardList.show();
-        newsCardList.render(result.articles);
-      }
+      
+      renderNewsFromData(result.totalResults, result.articles);      
     })
     .catch((err) => {
-      console.log(err);
+      
       preloader.hide();
       searchInput.unlockForm();
     });
@@ -47,4 +62,12 @@ function handleSearch(searchText) {
 
 const searchInput = new SearchInput(document.querySelector('.search'), handleSearch);
 
+function checkDataStorageData() {
+  if (searchTextFromDataStorage) {
+    searchInput.setSearchText(searchTextFromDataStorage);
+    hideBlocksBeforeRender();
+    renderNewsFromData(totalResultsFromDataStorage, newsFromDataStorage);
+  } 
+}
 
+checkDataStorageData();

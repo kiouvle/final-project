@@ -38,4 +38,8 @@ export default class SearchInput {
     this._searchButton.removeAttribute('disabled');
   }
 
+  setSearchText(searchText) {
+    this._input.value = searchText;
+  }
+
 }

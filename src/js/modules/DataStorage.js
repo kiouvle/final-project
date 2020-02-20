@@ -13,7 +13,7 @@ export default class DataStorage {
   }
 
   getNewsNumber() {
-    return localStorage.getItem('newsNumberStorage');
+    return parseInt(localStorage.getItem('newsNumberStorage'));
   }
 
   setNews(news) {

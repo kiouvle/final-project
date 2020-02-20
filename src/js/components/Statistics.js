@@ -27,7 +27,7 @@ export default class Statistics {
   _renderDay(day, dayData) {
     const chartLine = `<div class="chart__line">
     <div class="chart__line_day">${day}, ${getDayOfWeek(dayData.dayOfWeek)}</div>
-    <div class="chart__line_news-count" style="width: ${dayData.newsCount}%"><span class="chart__line_news-count_num">${dayData.newsCount}</span>
+    <div class="chart__line_news-count ${dayData.newsCount === 0 ? 'chart__line_news-count_zero' : ''}" style="width: ${dayData.newsCount}%"><span class="chart__line_news-count_num">${dayData.newsCount}</span>
     </div>
   </div>`;
   this._chartContent.insertAdjacentHTML('beforeend', chartLine);
