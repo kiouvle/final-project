@@ -1,5 +1,5 @@
-import {getHumanDate} from '../../utils/dateHelper';
-import {sanitizeHTML} from '../../utils/htmlHelper';
+import {getHumanDate} from '../../js/utils/dateHelper';
+import {sanitizeHTML} from '../../js/utils/htmlHelper';
 
 export default class NewsCard {  // новостные карточки
   constructor(card) {

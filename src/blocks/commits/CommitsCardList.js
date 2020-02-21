@@ -1,4 +1,4 @@
-import BaseComponent from '../base/BaseComponent';
+import BaseComponent from '../base-component/BaseComponent';
 
 export default class CommitsCardList extends BaseComponent { // список коммитов
   constructor(container, renderItemFunction) {

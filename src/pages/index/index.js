@@ -1,12 +1,12 @@
 import "./index.css";
 import NewsApi from '../../js/modules/NewsApi';
-import SearchInput from '../../js/components/search/SearchInput';
-import NewsCardList from '../../js/components/news/NewsCardList';
+import SearchInput from '../../blocks/search/SearchInput';
+import NewsCardList from '../../blocks/result/NewsCardList';
 import DataStorage from '../../js/modules/DataStorage';
 import { newsApiConfig } from '../../js/constants/constants';
-import HiddenElement from '../../js/components/base/HiddenElement';
-import NewsCard from '../../js/components/news/NewsCard';
-import NoResultBlock from '../../js/components/base/NoResultBlock';
+import HiddenElement from '../../blocks/hidden-element/HiddenElement';
+import NewsCard from '../../blocks/result-card/NewsCard';
+import NoResultBlock from '../../blocks/not-found/NoResultBlock';
 
 const newsApi = new NewsApi(newsApiConfig);
 

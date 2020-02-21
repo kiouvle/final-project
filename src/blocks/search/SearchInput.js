@@ -1,4 +1,4 @@
-import BaseComponent from '../base/BaseComponent';
+import BaseComponent from '../base-component/BaseComponent';
 
 export default class SearchInput extends BaseComponent { //класс поисковой формы
   constructor(container, searchCallback) { 

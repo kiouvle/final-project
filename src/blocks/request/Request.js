@@ -1,4 +1,4 @@
-import BaseComponent from '../base/BaseComponent';
+import BaseComponent from '../base-component/BaseComponent';
 
 export default class Request extends BaseComponent { //информация о запросе на странице аналитики
   constructor(container) {

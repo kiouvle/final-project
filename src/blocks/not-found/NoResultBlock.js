@@ -1,4 +1,4 @@
-import HiddenElement from './HiddenElement';
+import HiddenElement from '../hidden-element/HiddenElement';
 
 export default class NoResultBlock extends HiddenElement {
   constructor(container) {

@@ -1,4 +1,4 @@
-import HiddenElement from '../base/HiddenElement';
+import HiddenElement from '../hidden-element/HiddenElement';
 
 export default class NewsCardList extends HiddenElement { // список новостей
   constructor(container, renderNewsCardFunction) {

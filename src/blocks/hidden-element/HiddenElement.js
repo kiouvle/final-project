@@ -1,4 +1,4 @@
-import BaseComponent from './BaseComponent';
+import BaseComponent from '../base-component/BaseComponent';
 
 export default class HiddenElement extends BaseComponent {  
   constructor(container, hiddenClass) {

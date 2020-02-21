@@ -1,6 +1,6 @@
-import {getDayOfWeek} from '../../utils/dateHelper';
-import {getOccurenceNumber} from '../../utils/stringHelper';
-import BaseComponent from '../base/BaseComponent';
+import {getDayOfWeek} from '../../js/utils/dateHelper';
+import {getOccurenceNumber} from '../../js/utils/stringHelper';
+import BaseComponent from '../base-component/BaseComponent';
 
 export default class Statistics extends BaseComponent { //класс аналитики
   constructor(container, newsObject, searchString) {

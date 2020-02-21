@@ -1,8 +1,7 @@
 import "./analytics.css";
-import "../../blocks/chart/chart";
 import DataStorage from '../../js/modules/DataStorage';
-import Request from '../../js/components/request/Request';
-import Statistics from '../../js/components/statistics/Statistics';
+import Request from '../../blocks/request/Request';
+import Statistics from '../../blocks/chart/Statistics';
 import { getOccurenceNumber } from '../../js/utils/stringHelper';
 
 const dataStorage = new DataStorage();
@@ -18,6 +17,3 @@ request.changeTitle(searchText);
 request.changeNewsNumber(newsNumber);
 request.changeTitleNumber(titleNumber);
 statistics.render();
-
-
-
