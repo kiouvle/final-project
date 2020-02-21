@@ -14,14 +14,14 @@
 
 @media (min-width: 768px) {
   .footer {
-    padding-left: 204px;
+    padding-left: 31%;
     padding-right: 5.5%;
   }
 }
 
 @media (min-width: 1024px){
   .footer {
-    padding-left: 349px;
+    padding-left: 36%;
   }
 }
 
