@@ -1,18 +1,20 @@
 import BaseComponent from '../base/BaseComponent';
 
 export default class SearchInput extends BaseComponent { //класс поисковой формы
-  constructor(container, handlers) { 
+  constructor(container, searchCallback) { 
     super(container);
-    this.setHandlers(handlers);  //установка обработчиков событий
 
-    this._input = this.findElement('.search__text');
-    this._input.addEventListener('invalid', this._handleInvalid.bind(this));
-    this._input.addEventListener('input', this._handleInput.bind(this));
-    
+    this._searchCallback = searchCallback;
+
+    this._input = this.findElement('.search__text');    
     this._searchButton  = this.findElement('.search__button');
-    
     this._searchForm = this.findElement('.search__bar');
-    this._searchForm.addEventListener('submit', this._handleSubmit.bind(this));
+
+    this._setHandlers([ //установка обработчиков событий
+      { element: this._searchForm, event: 'submit', handler: this._handleSubmit.bind(this) },
+      { element: this._input, event: 'invalid', handler: this._handleInvalid.bind(this) },
+      { element: this._input, event: 'input', handler: this._handleInput.bind(this) }
+    ]);  
   }
 
   _handleSubmit(event) {
@@ -30,9 +32,8 @@ export default class SearchInput extends BaseComponent { //класс поиск
 
   search() {
     const searchText = this._input.value;  
-    const event = new CustomEvent('search', { 'detail': searchText });  //создание события
-
-    this._container.dispatchEvent(event);  // запуск события
+    
+    this._searchCallback(searchText);
   }
 
   lockForm() {

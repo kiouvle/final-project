@@ -39,9 +39,7 @@ function hideBlocksBeforeRender() {
   newsCardList.hide();
 }
 
-function handleSearch(event) {
-  const searchText = event.detail;
-
+function handleSearch(searchText) {  
   searchInput.lockForm();
   preloader.show();
 
@@ -65,7 +63,7 @@ function handleSearch(event) {
     });
 }
 
-const searchInput = new SearchInput(document.querySelector('.search'), [{ event: 'search', handler: handleSearch }]);
+const searchInput = new SearchInput(document.querySelector('.search'), handleSearch);
 
 function checkDataStorageData() {  //проверка локального хранилища на наличие данных
   if (searchTextFromDataStorage) {

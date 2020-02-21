@@ -3,14 +3,13 @@ export default class BaseComponent {  //базовый компонент от �
     this._container = container;
   }
 
-  setHandlers(handlers) {   //метод установки обработчиков событий
-    handlers.forEach(({ event, handler }) => {
-      this._container.addEventListener(event, handler);
+  _setHandlers(handlers) {   //метод установки обработчиков событий
+    handlers.forEach(({ element, event, handler }) => {
+      element.addEventListener(event, handler);
     });
   }
 
   findElement(className) {  //метод поиска элементов
     return this._container.querySelector(className);
   }
-
 }
