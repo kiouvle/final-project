@@ -1,9 +1,11 @@
 .news-card-list__card-container {
   margin: 0;
   padding: 0;
+  max-width: 1232px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-self: center;
 }
 
 @media (min-width: 768px) {
