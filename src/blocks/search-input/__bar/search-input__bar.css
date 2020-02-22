@@ -1,0 +1,12 @@
+.search-input__bar {
+  padding: 0 16px 32px 16px;
+  align-self: center;
+  width: 100%;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .search-input__bar {
+    padding: 0;
+  }
+}

@@ -1,0 +1,19 @@
+.commits-card-list__head {
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .commits-card-list__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-right: 5%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .commits-card-list__head {
+    margin-right: 7%;
+  }
+}

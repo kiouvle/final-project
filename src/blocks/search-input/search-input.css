@@ -1,0 +1,25 @@
+@import url(./__title/search-input__title.css);
+@import url(./__subtitle/search-input__subtitle.css);
+@import url(./__bar/search-input__bar.css);
+@import url(./__text/search-input__text.css);
+@import url(./__button/search-input__button.css);
+
+.search-input {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+@media (min-width: 768px) {
+  .search-input {
+    padding: 40px 21% 48px;;
+  }
+}
+
+@media (min-width: 1440px) {
+  .search-input {
+    padding: 80px 29%;
+  }
+}

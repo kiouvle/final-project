@@ -1,0 +1,19 @@
+@import url(./_left/statistics__head_left.css);
+@import url(./_right/statistics__head_right.css);
+
+.statistics__head {
+  display: flex;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+  border-bottom: 1px solid #1A1B22;
+  padding: 16px 0 8px;
+}
+
+@media (min-width: 768px) {
+  .statistics__head {
+    padding: 48px 0 12px;
+  }
+}

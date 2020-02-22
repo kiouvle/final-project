@@ -1,0 +1,9 @@
+.statistics__numbers_pos_bottom {  
+  bottom: 45px;
+}
+
+@media (min-width: 1440px) {
+  .statistics__numbers_pos_bottom {
+    bottom: 85px;
+  }
+}

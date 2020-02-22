@@ -1,0 +1,7 @@
+@import url(./_day/statistics__line_day.css);
+@import url(./_news-count/statistics__line_news-count.css);
+
+.statistics__line {
+  display: flex;
+  align-items: center;
+}

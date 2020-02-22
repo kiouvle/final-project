@@ -1,0 +1,9 @@
+.statistics__content {
+  margin-top: 8px;
+}
+
+@media (min-width: 768px) {
+  .statistics__content {
+    margin-top: 16px;
+  }
+}

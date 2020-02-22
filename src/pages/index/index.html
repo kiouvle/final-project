@@ -28,13 +28,13 @@
               href="about.html">О проекте</a></li>
         </ul>
       </header>
-      <div class="search">
-        <h1 class="search__title">Что в мире творится?</h1>
-        <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
+      <div class="search-input">
+        <h1 class="search-input__title">Что в мире творится?</h1>
+        <p class="search-input__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
           прошедшую неделю.</p>
-        <form name="search" class="search__bar" action="submit">
-          <input name="news-search" type="text" class="search__text" placeholder="Введите тему новости" required>
-          <button type="submit" class="button search__button">Искать</button>
+        <form name="search" class="search-input__bar" action="submit">
+          <input name="news-search" type="text" class="search-input__text" placeholder="Введите тему новости" required>
+          <button type="submit" class="button search-input__button">Искать</button>
         </form>
       </div>
     </section>
@@ -43,19 +43,19 @@
       <i class="preloader__pic"></i>
       <h4 class="preloader__message">Идет поиск новостей...</h4>
     </section>
-    <section class="not-found not-found_hidden">
-      <img class="not-found__pic" src="<%=require('../../images/not-found_v1.svg').default%>" alt="not-found">
-      <h3 class="not-found__title">Ничего не найдено</h3>
-      <p class="not-found__message">К сожалению по вашему запросу ничего не найдено.</p>
+    <section class="no-result no-result_hidden">
+      <img class="no-result__pic" src="<%=require('../../images/not-found_v1.svg').default%>" alt="no-result">
+      <h3 class="no-result__title">Ничего не найдено</h3>
+      <p class="no-result__message">К сожалению по вашему запросу ничего не найдено.</p>
     </section>
-    <section class="result result_hidden">
-      <div class="result__head">
-        <h2 class="result__title">Результаты поиска</h2>
-        <a class="result__link" href="analytics.html">Посмотреть аналитику&nbsp;</a>
+    <section class="news-card-list news-card-list_hidden">
+      <div class="news-card-list__head">
+        <h2 class="news-card-list__title">Результаты поиска</h2>
+        <a class="news-card-list__link" href="analytics.html">Посмотреть аналитику&nbsp;</a>
       </div>
-      <div class="result__card-container">
+      <div class="news-card-list__card-container">
       </div>
-      <button type="submit" class="button result__button">Показать еще</button>
+      <button type="submit" class="button news-card-list__button">Показать еще</button>
     </section>
     <section class="author">
       <picture class="author__pic-container">

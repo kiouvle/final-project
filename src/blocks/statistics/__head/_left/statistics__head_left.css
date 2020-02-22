@@ -1,0 +1,18 @@
+.statistics__head_left {
+  width: 80px;
+}
+
+@media (min-width: 768px) {
+  .statistics__head_left {
+    width: 117px;
+    padding-right: 50px;
+    box-sizing: border-box;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .statistics__head_left {
+    width: 104px;
+  }
+}

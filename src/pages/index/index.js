@@ -1,18 +1,18 @@
 import "./index.css";
 import NewsApi from '../../js/modules/NewsApi';
-import SearchInput from '../../blocks/search/SearchInput';
-import NewsCardList from '../../blocks/result/NewsCardList';
+import SearchInput from '../../blocks/search-input/SearchInput';
+import NewsCardList from '../../blocks/news-card-list/NewsCardList';
 import DataStorage from '../../js/modules/DataStorage';
 import { newsApiConfig } from '../../js/constants/constants';
-import HiddenElement from '../../blocks/hidden-element/HiddenElement';
-import NewsCard from '../../blocks/result-card/NewsCard';
-import NoResultBlock from '../../blocks/not-found/NoResultBlock';
+import HiddenElement from '../../js/components/HiddenElement';
+import NewsCard from '../../blocks/news-card/NewsCard';
+import NoResultBlock from '../../blocks/no-result/NoResultBlock';
 
 const newsApi = new NewsApi(newsApiConfig);
 
 const preloader = new HiddenElement(document.querySelector('.preloader'), 'preloader_hidden');
-const noResultBlock = new NoResultBlock(document.querySelector('.not-found'));
-const newsCardList = new NewsCardList(document.querySelector('.result'), addNewsCard);
+const noResultBlock = new NoResultBlock(document.querySelector('.no-result'));
+const newsCardList = new NewsCardList(document.querySelector('.news-card-list'), addNewsCard);
 
 
 const dataStorage = new DataStorage();
@@ -63,7 +63,7 @@ function handleSearch(searchText) {
     });
 }
 
-const searchInput = new SearchInput(document.querySelector('.search'), handleSearch);
+const searchInput = new SearchInput(document.querySelector('.search-input'), handleSearch);
 
 function checkDataStorageData() {  //проверка локального хранилища на наличие данных
   if (searchTextFromDataStorage) {

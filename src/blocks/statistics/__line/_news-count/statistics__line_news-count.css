@@ -1,0 +1,24 @@
+@import url(./_num/statistics__line_news-count_num.css);
+@import url(./_zero/statistics__line_news-count_zero.css);
+
+
+.statistics__line_news-count {
+  letter-spacing: 0.4px;
+  font-size: 12px;
+  line-height: 16px;
+  color: white;
+  background: #2F71E5;
+  height: 24px;
+  display: flex;
+  align-items: center;  
+  font-weight: bold;
+  padding-left: 6px;
+  margin-bottom: 6px;
+}
+
+@media (min-width: 768px) {
+  .statistics__line_news-count {
+    margin-bottom: 3px;
+  }
+}
+

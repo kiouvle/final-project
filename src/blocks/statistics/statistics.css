@@ -1,0 +1,24 @@
+@import url(./__title/statistics__title.css);
+@import url(./__head/statistics__head.css);
+@import url(./__numbers/statistics__numbers.css);
+@import url(./__line/statistics__line.css);
+@import url(./__content/statistics__content.css);
+
+.statistics {
+  background: #F5F6F7;
+  padding: 24px 5% 23px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+ .statistics {
+  padding: 40px 5% 47px;
+ }
+}
+
+
+@media (min-width: 1440px) {
+  .statistics {
+    padding: 77px 7% 87px;
+  }
+ }

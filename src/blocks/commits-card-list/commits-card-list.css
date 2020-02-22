@@ -1,0 +1,23 @@
+@import  url(./__title/commits-card-list__title.css);
+@import  url(./__link/commits-card-list__link.css);
+@import  url(./__button/commits-card-list__button.css);
+@import url(./__head/commits-card-list__head.css);
+
+.commits-card-list {
+  background: #F5F6F7;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0 32px;
+}
+
+@media (min-width: 768px) {
+  .commits-card-list {
+    padding: 40px 0 33px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .commits-card-list {
+    padding: 74px 0 80px;
+  }
+}

@@ -1,0 +1,23 @@
+.news-card-list__title {
+  margin: 0 0 16px 0;
+  padding: 0;
+  font-family: Roboto Slab, Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 34px;
+}
+
+@media (min-width: 768px) {
+  .news-card-list__title {
+    width: max-content;
+  }
+}
+
+@media (min-width: 1440px) {
+  .news-card-list__title {
+    font-size: 40px;
+    line-height: 46px;
+    margin-bottom: 64px;
+  }
+}
