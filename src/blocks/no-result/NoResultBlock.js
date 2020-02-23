@@ -1,4 +1,5 @@
 import HiddenElement from '../../js/components/HiddenElement';
+import {SERVER_ERROR_MESSAGE, NOT_FOUND_MESSAGE} from '../../js/constants/constants';
 
 export default class NoResultBlock extends HiddenElement {
   constructor(container) {
@@ -11,12 +12,12 @@ export default class NoResultBlock extends HiddenElement {
   }
 
   showServerErrorMessage() { //не найдено для случаев ошибки
-    this._setDescriptionText('Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.')
+    this._setDescriptionText(SERVER_ERROR_MESSAGE);
     this.show();
   }
 
   showNotFoundMessage() { //не найдено для неверного запроса
-    this._setDescriptionText('К сожалению по вашему запросу ничего не найдено.');
+    this._setDescriptionText(NOT_FOUND_MESSAGE);
     this.show();
   }
 }

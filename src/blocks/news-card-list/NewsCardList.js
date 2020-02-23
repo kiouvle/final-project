@@ -23,7 +23,7 @@ export default class NewsCardList extends HiddenElement { // список нов
 
     this._cardsContainer.insertAdjacentHTML('beforeend', this._cardsArray.splice(0, numberOfNewsPerPage).map((card) => this._renderNewsCardFunction(card)).join(''));
 
-    if (this._cardsArray.length === 0) {
+    if (!this._cardsArray.length) {
       this._newsButton.classList.add('news-card-list__button_hidden');
     } else {
       this._newsButton.classList.remove('news-card-list__button_hidden');

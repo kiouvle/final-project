@@ -1,4 +1,5 @@
 import {getCurrentDate, getDateWeekAgo} from '../utils/dateHelper';
+import {NEWS_NUMBER, NEWS_LANGUAGE} from '../constants/constants';
 
 export default class NewsApi {
   constructor(options) {
@@ -8,7 +9,7 @@ export default class NewsApi {
 
   getNews(searchText) {
     const url = new URL(`${this.baseUrl}/everything`)
-    const params = {apiKey: this.apiKey, q: searchText, from: getDateWeekAgo(), to: getCurrentDate(), pageSize: 100, language: 'ru'} 
+    const params = {apiKey: this.apiKey, q: searchText, from: getDateWeekAgo(), to: getCurrentDate(), pageSize: NEWS_NUMBER, language: NEWS_LANGUAGE} 
 
     url.search = new URLSearchParams(params).toString();
 

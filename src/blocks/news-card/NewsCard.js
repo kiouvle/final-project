@@ -12,7 +12,7 @@ export default class NewsCard {  // новостные карточки
   
    return `<a class="news-card" href="${sanitizeHTML(this._card.url)}" target="_blank">
           <div class="news-card__photo-wrapper">
-            <img class="news-card__photo" src="${sanitizeHTML(this._card.urlToImage)}" alt="${sanitizeHTML(this._card.title)}">
+            <div class="news-card__photo" style="background-image:url(${sanitizeHTML(this._card.urlToImage)});"></div>
           </div>
           <div class="news-card__info">
             <p class="news-card__date">${formatedDate}</p>

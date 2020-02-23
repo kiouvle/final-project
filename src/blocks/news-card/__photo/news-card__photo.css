@@ -5,6 +5,7 @@
   height: 100%;
   position: absolute;
   top: 0;
+  background-size: cover;
 }
 
 @media (min-width: 768px) {

@@ -3,12 +3,12 @@ import NewsApi from '../../js/modules/NewsApi';
 import SearchInput from '../../blocks/search-input/SearchInput';
 import NewsCardList from '../../blocks/news-card-list/NewsCardList';
 import DataStorage from '../../js/modules/DataStorage';
-import { newsApiConfig } from '../../js/constants/constants';
+import { NEWS_API_CONFIG } from '../../js/constants/constants';
 import HiddenElement from '../../js/components/HiddenElement';
 import NewsCard from '../../blocks/news-card/NewsCard';
 import NoResultBlock from '../../blocks/no-result/NoResultBlock';
 
-const newsApi = new NewsApi(newsApiConfig);
+const newsApi = new NewsApi(NEWS_API_CONFIG);
 
 const preloader = new HiddenElement(document.querySelector('.preloader'), 'preloader_hidden');
 const noResultBlock = new NoResultBlock(document.querySelector('.no-result'));
@@ -26,7 +26,7 @@ function addNewsCard(card) {
 }
 
 function renderNewsFromData(totalResults, news) { //отрисовка новостей из данных
-  if (totalResults === 0) {
+  if (!totalResults) {
     noResultBlock.showNotFoundMessage();
   } else {
     newsCardList.show();
@@ -56,7 +56,6 @@ function handleSearch(searchText) {
       renderNewsFromData(result.totalResults, result.articles);
     })
     .catch((err) => {  //ошибка
-      console.log(err);
       preloader.hide();
       searchInput.unlockForm();
       noResultBlock.showServerErrorMessage();

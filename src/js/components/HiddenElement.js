@@ -1,8 +1,8 @@
 import BaseComponent from './BaseComponent';
 
 export default class HiddenElement extends BaseComponent {  
-  constructor(container, hiddenClass) {
-    super(container);  //вызов конструктора класса BaseComponent
+  constructor(container, hiddenClass, handlers) {
+    super(container, handlers);  //вызов конструктора класса BaseComponent
 
     this._hiddenClass = hiddenClass;
   }
