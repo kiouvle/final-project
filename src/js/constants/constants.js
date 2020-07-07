@@ -1,6 +1,6 @@
 export const NEWS_API_CONFIG = {
   baseUrl: 'https://newsapi.org/v2',
-  apiKey: 'e2b345173b0a4b8b8c6d88b387688e25'
+  apiKey: '91300066944f4675853053c01c24d59b'
 }
 
 export const GITHUB_API_CONFIG = {
