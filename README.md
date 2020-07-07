@@ -38,6 +38,3 @@ npm run build # собрать проект.
 - gh-pages - для публикации сайта
 - Webpack plugins - для оптимизации файлов определенного типа
 
-## Планы по доработке проекта:
-
-https://trello.com/b/DyZPMjeN/ya-praktikum-final-project
